@@ -52,7 +52,8 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
             @Override
             public void onResponse(Call<LoginModel> call, Response<LoginModel> response) {
                 if(response.isSuccessful()){
-                    Toast.makeText(LoginPage.this,"Success token = "+ response.body().getData().getDatas().getJwtTokenData(),Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginPage.this,"Success, Selamat datang "+ response.body().getData().getDatas().getAccountData().getFullName(),Toast.LENGTH_LONG).show();
+
                     Intent i = new Intent(LoginPage.this,HomeUser.class);
                     startActivity(i);
                 }else{
