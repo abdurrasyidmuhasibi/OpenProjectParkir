@@ -53,9 +53,14 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
             public void onResponse(Call<LoginModel> call, Response<LoginModel> response) {
                 if(response.isSuccessful()){
                     Toast.makeText(LoginPage.this,"Success, Selamat datang "+ response.body().getData().getDatas().getAccountData().getFullName(),Toast.LENGTH_LONG).show();
-
-                    Intent i = new Intent(LoginPage.this,HomeUser.class);
-                    startActivity(i);
+                    int role = response.body().getData().getDatas().getAccountData().getAccountRole().getId();
+                    if(role == 1){
+                        Intent i = new Intent(LoginPage.this,HomeKangParkir.class);
+                        startActivity(i);
+                    } else if(role == 2){
+                        Intent i = new Intent(LoginPage.this,HomeUser.class);
+                        startActivity(i);
+                    }
                 }else{
                     Toast.makeText(LoginPage.this,"Error",Toast.LENGTH_LONG).show();
                 }
