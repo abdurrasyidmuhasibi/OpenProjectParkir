@@ -10,6 +10,7 @@ import android.widget.Toast;
 import com.example.parkir.R;
 import com.example.parkir.RetrofitClient;
 import com.example.parkir.api.api;
+import com.example.parkir.helpers.PreferenceHelper;
 import com.example.parkir.model.login.LoginModel;
 
 import retrofit2.Call;
@@ -26,6 +27,7 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
 
+        autoLogin();
         etUsername = (EditText) findViewById(R.id.et_username);
         etPassword = (EditText) findViewById(R.id.et_password);
 
@@ -54,8 +56,7 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
                 if(response.isSuccessful()){
                     Toast.makeText(LoginPage.this,"Success, Selamat datang "+ response.body().getData().getDatas().getAccountData().getFullName(),Toast.LENGTH_LONG).show();
 
-                    Intent i = new Intent(LoginPage.this,HomeUser.class);
-                    startActivity(i);
+                    processSaveToken(response.body().getData().getDatas().getJwtTokenData(), response.body().getData().getDatas().getAccountData().getAccountRole().getId().toString());
                 }else{
                     Toast.makeText(LoginPage.this,"Error",Toast.LENGTH_LONG).show();
                 }
@@ -66,5 +67,37 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
                 Toast.makeText(LoginPage.this,"Error failure",Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    private void processSaveToken(String jwtToken, String roleid) {
+        PreferenceHelper prefShared = new PreferenceHelper(this);
+        prefShared.setStr("jwtToken", "Bearer "+jwtToken);
+        prefShared.setStr("roleid", roleid);
+        Toast.makeText(LoginPage.this, ""+ roleid, Toast.LENGTH_LONG).show();
+        if (roleid.equals("1")){
+            Intent i = new Intent(LoginPage.this, HomeKangParkir.class);
+            startActivity(i);
+        }else{
+            Intent i = new Intent(LoginPage.this, HomeUser.class);
+            startActivity(i);
+        }
+    }
+
+    private void autoLogin(){
+        PreferenceHelper prefShared = new PreferenceHelper(this);
+        String jwtToken = prefShared.getStr("jwtToken");
+        String roleid = prefShared.getStr("roleid");
+
+        if (jwtToken != null) {
+            if (roleid.equals("1")){
+                Intent i = new Intent(LoginPage.this, HomeKangParkir.class);
+                startActivity(i);
+            }else{
+                Intent i = new Intent(LoginPage.this, HomeUser.class);
+                startActivity(i);
+            }
+        }else{
+            Toast.makeText(LoginPage.this, "Silahkan login terlebih dahulu.", Toast.LENGTH_LONG).show();
+        }
     }
 }
