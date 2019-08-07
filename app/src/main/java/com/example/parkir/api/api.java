@@ -1,5 +1,6 @@
 package com.example.parkir.api;
 
+import com.example.parkir.model.PaymentParking.PaymentParkingModel;
 import com.example.parkir.model.account.AccountModel;
 import com.example.parkir.model.login.LoginModel;
 
@@ -20,4 +21,11 @@ public interface api {
 
     @GET("accounts/")
     Call<AccountModel> account(@Header("Authorization") String token);
+
+    @FormUrlEncoded
+    @POST("payments/")
+    Call<PaymentParkingModel> payments(
+            @Header("Authorization") String token,
+            @Field("receiverid") String receiverid
+    );
 }

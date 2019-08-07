@@ -15,6 +15,7 @@ import com.example.parkir.R;
 import com.example.parkir.RetrofitClient;
 import com.example.parkir.api.api;
 import com.example.parkir.helpers.PreferenceHelper;
+import com.example.parkir.model.PaymentParking.PaymentParkingModel;
 import com.example.parkir.model.account.AccountModel;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
@@ -85,18 +86,28 @@ public class HomeUser extends AppCompatActivity {
             if (result.getContents() == null){
                 Toast.makeText(this, "Hasil tidak ditemukan", Toast.LENGTH_SHORT).show();
             }else{
-                // jika qrcode berisi data
-                try{
-                    // converting the data json
-                    JSONObject object = new JSONObject(result.getContents());
-                    // atur nilai ke textviews
-                    Toast.makeText(HomeUser.this, "Scanner QR Code", Toast.LENGTH_SHORT).show();
-                }catch (JSONException e){
-                    e.printStackTrace();
-                    // jika format encoded tidak sesuai maka hasil
-                    // ditampilkan ke toast
-                    Toast.makeText(this, result.getContents(), Toast.LENGTH_SHORT).show();
-                }
+                /* GET JWT TOKEN */
+                PreferenceHelper prefShared = new PreferenceHelper(this);
+                String jwtToken = prefShared.getStr("jwtToken");
+                /* GET JWT TOKEN */
+
+                String receiverid = result.getContents();
+                /*Create handle for the RetrofitInstance interface*/
+                api service = RetrofitClient.getRetrofitInstance().create(api.class);
+                Call<PaymentParkingModel> call = service.payments(jwtToken, receiverid);
+                call.enqueue(new Callback<PaymentParkingModel>() {
+                    @Override
+                    public void onResponse(Call<PaymentParkingModel> call, Response<PaymentParkingModel> response) {
+                        Toast.makeText(HomeUser.this, "" + response.body().getData().getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onFailure(Call<PaymentParkingModel> call, Throwable t) {
+                        Toast.makeText(HomeUser.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
+                    }
+
+
+                });
             }
         }else{
             super.onActivityResult(requestCode, resultCode, data);
