@@ -15,12 +15,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.QrCodeScanner"></activity>
-        <activity android:name=".activities.QrCode" />
-        <activity android:name=".activities.HomeKangParkir" />
-        <activity android:name=".activities.HomeUser" />
-        <activity android:name=".activities.LoginPage" />
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.SettingLogout"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.Success"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.DetailPembayaran"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.QrCodeScanner"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.QrCode"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.HomeKangParkir"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.HomeUser"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.LoginPage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activities.MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

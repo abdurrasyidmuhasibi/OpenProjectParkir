@@ -37,4 +37,14 @@ public class QrCode extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
+    public void myHome(View view){
+        Intent i = new Intent(QrCode.this,HomeUser.class);
+        startActivity(i);
+    }
+
+    public void myAkun(View view){
+        Intent i = new Intent(QrCode.this,SettingLogout.class);
+        startActivity(i);
+    }
 }

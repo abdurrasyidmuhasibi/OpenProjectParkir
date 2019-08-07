@@ -22,13 +22,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/txtName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:layout_marginLeft="48dp"
         android:layout_marginTop="2dp"
-        android:text="Irfan Rafif"
+        android:text="Nama User"
         android:textColor="#FFFFFF"
         android:textSize="36sp"
         android:textStyle="bold"
@@ -51,22 +51,22 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
 
     <RelativeLayout
-        android:background="@drawable/bg_header"
         android:layout_width="283dp"
         android:layout_height="107dp"
         android:layout_marginStart="64dp"
         android:layout_marginLeft="64dp"
         android:layout_marginEnd="64dp"
         android:layout_marginRight="64dp"
+        android:background="@drawable/bg_header"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7">
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/txtBalance"
             android:layout_width="134dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -79,7 +79,7 @@
             android:layout_marginTop="13dp"
             android:layout_marginEnd="66dp"
             android:layout_marginRight="66dp"
-            android:text="Rp. 100.000"
+            android:text="Rp. 0"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="24sp"
@@ -125,39 +125,42 @@
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
     </RelativeLayout>
 
+
     <RelativeLayout
-    android:id="@+id/relativeLayout2"
-    android:layout_width="match_parent"
-    android:layout_height="36dp"
-    android:layout_marginEnd="1dp"
-    android:layout_marginRight="1dp"
-    android:background="@drawable/bg_header"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent">
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:background="@drawable/bg_header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="100dp"
-        android:src="@drawable/home_button" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="100dp"
+            android:src="@drawable/home_button"
+            android:onClick="myHome"/>
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="150dp"
-        android:onClick="myScan"
-        android:src="@drawable/qr_scanner_button" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="150dp"
+            android:onClick="myScan"
+            android:src="@drawable/qr_scanner_button" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="230dp"
-        android:src="@drawable/account_buttonn" />
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="230dp"
+            android:src="@drawable/account_buttonn"
+            android:onClick="myAkun"/>
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
