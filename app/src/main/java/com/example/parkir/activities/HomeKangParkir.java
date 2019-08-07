@@ -58,11 +58,6 @@ public class HomeKangParkir extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void myHome(View view){
-        Intent i = new Intent(HomeKangParkir.this,HomeUser.class);
-        startActivity(i);
-    }
-
     public void myAkun(View view){
         Intent i = new Intent(HomeKangParkir.this,SettingLogout.class);
         startActivity(i);

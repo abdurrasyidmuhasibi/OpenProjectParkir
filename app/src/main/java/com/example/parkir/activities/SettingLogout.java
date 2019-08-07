@@ -19,9 +19,4 @@ public class SettingLogout extends AppCompatActivity {
         Intent i = new Intent(SettingLogout.this,HomeUser.class);
         startActivity(i);
     }
-
-    public void myAkun(View view){
-        Intent i = new Intent(SettingLogout.this,SettingLogout.class);
-        startActivity(i);
-    }
 }

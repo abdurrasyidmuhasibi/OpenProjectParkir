@@ -73,11 +73,6 @@ public class HomeUser extends AppCompatActivity {
         intentIntegrator.initiateScan();
     }
 
-    public void myHome(View view){
-        Intent i = new Intent(HomeUser.this,HomeUser.class);
-        startActivity(i);
-    }
-
     public void myAkun(View view){
         Intent i = new Intent(HomeUser.this,SettingLogout.class);
         startActivity(i);
