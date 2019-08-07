@@ -56,7 +56,7 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
                 if(response.isSuccessful()){
                     Toast.makeText(LoginPage.this,"Success, Selamat datang "+ response.body().getData().getDatas().getAccountData().getFullName(),Toast.LENGTH_LONG).show();
 
-                    processSaveToken(response.body().getData().getDatas().getJwtTokenData(), response.body().getData().getDatas().getAccountData().getAccountRole().getId().toString());
+                    processSaveToken(response.body().getData().getDatas().getJwtTokenData(), response.body().getData().getDatas().getAccountData().getAccountRole().getId().toString(), response.body().getData().getDatas().getAccountData().getId().toString());
                 }else{
                     Toast.makeText(LoginPage.this,"Error",Toast.LENGTH_LONG).show();
                 }
@@ -69,10 +69,11 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
         });
     }
 
-    private void processSaveToken(String jwtToken, String roleid) {
+    private void processSaveToken(String jwtToken, String roleid, String accountid) {
         PreferenceHelper prefShared = new PreferenceHelper(this);
         prefShared.setStr("jwtToken", "Bearer "+jwtToken);
         prefShared.setStr("roleid", roleid);
+        prefShared.setStr("accountid", accountid);
         Toast.makeText(LoginPage.this, ""+ roleid, Toast.LENGTH_LONG).show();
         if (roleid.equals("1")){
             Intent i = new Intent(LoginPage.this, HomeKangParkir.class);
