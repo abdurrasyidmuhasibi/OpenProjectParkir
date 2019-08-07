@@ -74,7 +74,6 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
         prefShared.setStr("jwtToken", "Bearer "+jwtToken);
         prefShared.setStr("roleid", roleid);
         prefShared.setStr("accountid", accountid);
-        Toast.makeText(LoginPage.this, ""+ roleid, Toast.LENGTH_LONG).show();
         if (roleid.equals("1")){
             Intent i = new Intent(LoginPage.this, HomeKangParkir.class);
             startActivity(i);
