@@ -28,7 +28,7 @@
         android:layout_marginStart="48dp"
         android:layout_marginLeft="48dp"
         android:layout_marginTop="2dp"
-        android:text="Nurgiantoro"
+        android:text="Kang Parkir"
         android:textColor="#FFFFFF"
         android:textSize="36sp"
         android:textStyle="bold"
@@ -54,13 +54,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <RelativeLayout
-        android:background="@drawable/bg_header"
         android:layout_width="283dp"
         android:layout_height="107dp"
         android:layout_marginStart="64dp"
         android:layout_marginLeft="64dp"
         android:layout_marginEnd="64dp"
         android:layout_marginRight="64dp"
+        android:background="@drawable/bg_header"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7">
@@ -125,32 +125,39 @@
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
     </RelativeLayout>
 
+
     <RelativeLayout
+        android:id="@+id/relativeLayout2"
         android:layout_width="match_parent"
         android:layout_height="36dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
         android:background="@drawable/bg_header"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="86dp"
+            android:layout_marginLeft="100dp"
             android:src="@drawable/home_button" />
 
         <ImageView
+            android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:layout_marginLeft="150dp"
+            android:onClick="myQrCode"
             android:src="@drawable/qr_scanner_button" />
 
         <ImageView
+            android:id="@+id/imageView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="86dp"
+            android:layout_marginLeft="230dp"
             android:src="@drawable/account_buttonn" />
     </RelativeLayout>
 
