@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.parkir.R;
@@ -14,15 +15,20 @@ import com.google.zxing.integration.android.IntentResult;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class HomeUser extends AppCompatActivity {
+public class QrCodeScanner extends AppCompatActivity {
 
     private Button btnScan;
+    private TextView textViewNama, textViewTinggi;
     private IntentIntegrator intentIntegrator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_user);
+        setContentView(R.layout.activity_qr_code_scanner);
+
+        btnScan = (Button) findViewById(R.id.btn_scan);
+        textViewNama = (TextView) findViewById(R.id.textViewNama);
+        textViewTinggi = (TextView) findViewById(R.id.textViewTinggi);
     }
 
     public void myScan(View view){
@@ -42,7 +48,8 @@ public class HomeUser extends AppCompatActivity {
                     // converting the data json
                     JSONObject object = new JSONObject(result.getContents());
                     // atur nilai ke textviews
-                    Toast.makeText(HomeUser.this, "Scanner QR Code", Toast.LENGTH_SHORT).show();
+                    textViewNama.setText(object.getString("nama"));
+                    textViewTinggi.setText(object.getString("tinggi"));
                 }catch (JSONException e){
                     e.printStackTrace();
                     // jika format encoded tidak sesuai maka hasil
