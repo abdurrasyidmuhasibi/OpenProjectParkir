@@ -1,8 +1,8 @@
 package com.example.parkir.api;
 
+import com.example.parkir.model.PaymentParking.PaymentParkingModel;
 import com.example.parkir.model.account.AccountModel;
 import com.example.parkir.model.login.LoginModel;
-import com.example.parkir.model.payment.PaymentModel;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -24,5 +24,8 @@ public interface api {
 
     @FormUrlEncoded
     @POST("payments/")
-    Call<PaymentModel> payments(@Header("Authorization") String token);
+    Call<PaymentParkingModel> payments(
+            @Header("Authorization") String token,
+            @Field("receiverid") String receiverid
+    );
 }

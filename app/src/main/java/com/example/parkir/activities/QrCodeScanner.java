@@ -9,14 +9,22 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.parkir.R;
+import com.example.parkir.RetrofitClient;
+import com.example.parkir.api.api;
+import com.example.parkir.helpers.PreferenceHelper;
+import com.example.parkir.model.PaymentParking.PaymentParkingModel;
+import com.example.parkir.model.account.AccountModel;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class QrCodeScanner extends AppCompatActivity {
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
+public class QrCodeScanner extends AppCompatActivity {
     private Button btnScan;
     private TextView textViewNama, textViewTinggi;
     private IntentIntegrator intentIntegrator;
@@ -34,31 +42,5 @@ public class QrCodeScanner extends AppCompatActivity {
     public void myScan(View view){
         intentIntegrator = new IntentIntegrator(this);
         intentIntegrator.initiateScan();
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-        if (result != null){
-            if (result.getContents() == null){
-                Toast.makeText(this, "Hasil tidak ditemukan", Toast.LENGTH_SHORT).show();
-            }else{
-                // jika qrcode berisi data
-                try{
-                    // converting the data json
-                    JSONObject object = new JSONObject(result.getContents());
-                    // atur nilai ke textviews
-                    textViewNama.setText(object.getString("nama"));
-                    textViewTinggi.setText(object.getString("tinggi"));
-                }catch (JSONException e){
-                    e.printStackTrace();
-                    // jika format encoded tidak sesuai maka hasil
-                    // ditampilkan ke toast
-                    Toast.makeText(this, result.getContents(), Toast.LENGTH_SHORT).show();
-                }
-            }
-        }else{
-            super.onActivityResult(requestCode, resultCode, data);
-        }
     }
 }
