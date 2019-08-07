@@ -28,4 +28,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             break;
         }
     }
+
+    public void daftarKangParkir(View view){
+        Intent i = new Intent(MainActivity.this,DaftarKangParkir.class);
+        startActivity(i);
+    }
+
+    public void daftarUser(View view){
+        Intent i = new Intent(MainActivity.this,DaftarUser.class);
+        startActivity(i);
+    }
 }

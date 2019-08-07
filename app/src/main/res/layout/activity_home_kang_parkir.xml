@@ -141,8 +141,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="100dp"
-            android:src="@drawable/home_button"
-            android:onClick="myHome"/>
+            android:src="@drawable/home_button"/>
 
         <ImageView
             android:id="@+id/imageView2"
