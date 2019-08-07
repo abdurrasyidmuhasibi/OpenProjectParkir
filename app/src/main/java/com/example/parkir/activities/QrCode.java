@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.parkir.R;
+import com.example.parkir.helpers.PreferenceHelper;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
@@ -23,7 +24,9 @@ public class QrCode extends AppCompatActivity {
 
         imageView = (ImageView) this.findViewById(R.id.imageView);
 
-        String text2Qr = "alfaben";
+        PreferenceHelper prefShared = new PreferenceHelper(this);
+        String text2Qr = prefShared.getStr("accountid");
+
         MultiFormatWriter multiFormatWriter = new MultiFormatWriter();
         try {
             BitMatrix bitMatrix = multiFormatWriter.encode(text2Qr, BarcodeFormat.QR_CODE,200,200);
