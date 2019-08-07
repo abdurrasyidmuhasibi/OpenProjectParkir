@@ -90,12 +90,12 @@ public class HomeUser extends AppCompatActivity {
                     // converting the data json
                     JSONObject object = new JSONObject(result.getContents());
                     // atur nilai ke textviews
-                    Toast.makeText(HomeUser.this, "Scanner QR Code", Toast.LENGTH_SHORT).show();
                 }catch (JSONException e){
                     e.printStackTrace();
                     // jika format encoded tidak sesuai maka hasil
                     // ditampilkan ke toast
-                    Toast.makeText(this, result.getContents(), Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(this, result.getContents(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(HomeUser.this, "Scanner QR Code", Toast.LENGTH_SHORT).show();
                 }
             }
         }else{

@@ -1,9 +1,9 @@
-package com.example.parkir.model.account;
+package com.example.parkir.model.payment;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class AccountModel {
+public class PaymentModel {
 
     @SerializedName("result")
     @Expose

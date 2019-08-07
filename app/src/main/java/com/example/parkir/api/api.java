@@ -2,6 +2,7 @@ package com.example.parkir.api;
 
 import com.example.parkir.model.account.AccountModel;
 import com.example.parkir.model.login.LoginModel;
+import com.example.parkir.model.payment.PaymentModel;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -20,4 +21,8 @@ public interface api {
 
     @GET("accounts/")
     Call<AccountModel> account(@Header("Authorization") String token);
+
+    @FormUrlEncoded
+    @POST("payments/")
+    Call<PaymentModel> payments(@Header("Authorization") String token);
 }
