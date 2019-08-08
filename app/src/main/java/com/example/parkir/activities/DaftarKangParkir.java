@@ -10,6 +10,7 @@ import android.widget.Toast;
 import com.example.parkir.R;
 import com.example.parkir.RetrofitClient;
 import com.example.parkir.api.api;
+import com.example.parkir.helpers.PreferenceHelper;
 import com.example.parkir.model.daftar.RegisterModel;
 import com.example.parkir.model.login.LoginModel;
 
@@ -60,6 +61,7 @@ public class DaftarKangParkir extends AppCompatActivity implements View.OnClickL
                     @Override
                     public void onResponse(Call<LoginModel> call, Response<LoginModel> response) {
                         Toast.makeText(DaftarKangParkir.this,"Berhasil Login, Lanjut Daftar Penugasan",Toast.LENGTH_SHORT).show();
+                        processSaveToken(response.body().getData().getDatas().getJwtTokenData(), response.body().getData().getDatas().getAccountData().getAccountRole().getId().toString(), response.body().getData().getDatas().getAccountData().getId().toString());
                     }
 
                     @Override
@@ -84,6 +86,20 @@ public class DaftarKangParkir extends AppCompatActivity implements View.OnClickL
                 Intent i = new Intent(DaftarKangParkir.this,DaftarPenugasan.class);
                 startActivity(i);
                 break;
+        }
+    }
+
+    private void processSaveToken(String jwtToken, String roleid, String accountid) {
+        PreferenceHelper prefShared = new PreferenceHelper(this);
+        prefShared.setStr("jwtToken", "Bearer "+jwtToken);
+        prefShared.setStr("roleid", roleid);
+        prefShared.setStr("accountid", accountid);
+        if (roleid.equals("1")){
+            Intent i = new Intent(DaftarKangParkir.this, DaftarPenugasan.class);
+            startActivity(i);
+        }else{
+            Intent i = new Intent(DaftarKangParkir.this, HomeUser.class);
+            startActivity(i);
         }
     }
 }

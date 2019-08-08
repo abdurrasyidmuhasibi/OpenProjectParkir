@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.parkir.R;
+import com.example.parkir.helpers.PreferenceHelper;
 
 public class SettingAkun extends AppCompatActivity {
 
@@ -17,6 +18,15 @@ public class SettingAkun extends AppCompatActivity {
 
     public void myHome(View view){
         Intent i = new Intent(SettingAkun.this,HomeUser.class);
+        startActivity(i);
+    }
+
+    public void clickLogout(View view){
+        PreferenceHelper prefShared = new PreferenceHelper(this);
+        prefShared.setStr("jwtToken", null);
+        prefShared.setStr("roleid", null);
+        prefShared.setStr("accountid", null);
+        Intent i = new Intent(SettingAkun.this, MainActivity.class);
         startActivity(i);
     }
 }

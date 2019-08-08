@@ -10,6 +10,7 @@ import android.widget.Toast;
 import com.example.parkir.R;
 import com.example.parkir.RetrofitClient;
 import com.example.parkir.api.api;
+import com.example.parkir.helpers.PreferenceHelper;
 import com.example.parkir.model.account.Assignment;
 import com.example.parkir.model.daftar.RegisterModel;
 
@@ -51,10 +52,13 @@ public class DaftarPenugasan extends AppCompatActivity implements View.OnClickLi
         String kecamatan = etKecamatan.getText().toString().trim();
         String kota = etKota.getText().toString().trim();
 
+        PreferenceHelper prefShared = new PreferenceHelper(this);
+        String token = prefShared.getStr("jwtToken");
+
         Call<Assignment> call = RetrofitClient
                 .getRetrofitInstance()
                 .create(api.class)
-                .assignment(namaLokasi,alamatLokasi,kecamatan,kota);
+                .assignment(token,namaLokasi,alamatLokasi,kecamatan,kota);
 
         call.enqueue(new Callback<Assignment>() {
             @Override

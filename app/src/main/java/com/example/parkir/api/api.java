@@ -12,6 +12,7 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface api {
@@ -34,8 +35,9 @@ public interface api {
     );
 
     @FormUrlEncoded
-    @POST("assignments/")
+    @PUT("assignments/")
     Call<Assignment> assignment(
+            @Header("Authorization") String token,
             @Field("location_name") String namaLokasi,
             @Field("location_address") String alamatLokasi,
             @Field("district") String kecamatan,

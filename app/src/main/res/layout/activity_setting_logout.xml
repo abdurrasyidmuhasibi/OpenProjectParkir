@@ -21,6 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:onClick="clickLogout"
         android:id="@+id/button4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

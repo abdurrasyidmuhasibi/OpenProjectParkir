@@ -86,16 +86,22 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
     private void autoLogin(){
         PreferenceHelper prefShared = new PreferenceHelper(this);
         String jwtToken = prefShared.getStr("jwtToken");
+        String accountid = prefShared.getStr("accountid");
         String roleid = prefShared.getStr("roleid");
 
         if (jwtToken != null) {
-            if (roleid.equals("1")){
-                Intent i = new Intent(LoginPage.this, HomeKangParkir.class);
-                startActivity(i);
+            if (accountid != null){
+                if (roleid.equals("1")){
+                    Intent i = new Intent(LoginPage.this, HomeKangParkir.class);
+                    startActivity(i);
+                }else{
+                    Intent i = new Intent(LoginPage.this, HomeUser.class);
+                    startActivity(i);
+                }
             }else{
-                Intent i = new Intent(LoginPage.this, HomeUser.class);
-                startActivity(i);
+                Toast.makeText(LoginPage.this, "Silahkan re-login terlebih dahulu.", Toast.LENGTH_LONG).show();
             }
+
         }else{
             Toast.makeText(LoginPage.this, "Silahkan login terlebih dahulu.", Toast.LENGTH_LONG).show();
         }
