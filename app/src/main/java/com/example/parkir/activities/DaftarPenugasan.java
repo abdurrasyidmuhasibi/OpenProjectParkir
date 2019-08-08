@@ -13,7 +13,6 @@ import com.example.parkir.RetrofitClient;
 import com.example.parkir.api.api;
 import com.example.parkir.helpers.PreferenceHelper;
 import com.example.parkir.model.account.Assignment;
-import com.example.parkir.model.daftar.RegisterModel;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -40,21 +39,21 @@ public class DaftarPenugasan extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn_daftar:
-                if(cbSyarat.isChecked()){
+                if (cbSyarat.isChecked()) {
                     daftarPenugasan();
-                    Intent i = new Intent(DaftarPenugasan.this,HomeKangParkir.class);
+                    Intent i = new Intent(DaftarPenugasan.this, HomeKangParkir.class);
                     startActivity(i);
                     break;
                 } else {
-                    Toast.makeText(DaftarPenugasan.this,"Centang Syarat & Ketentuan untuk melanjutkan Pendaftaran",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DaftarPenugasan.this, "Centang Syarat & Ketentuan untuk melanjutkan Pendaftaran", Toast.LENGTH_SHORT).show();
                     break;
                 }
         }
     }
 
-    private void daftarPenugasan(){
+    private void daftarPenugasan() {
         String namaLokasi = etNamaLokasi.getText().toString().trim();
         String alamatLokasi = etAlamatLokasi.getText().toString().trim();
         String kecamatan = etKecamatan.getText().toString().trim();
@@ -66,17 +65,17 @@ public class DaftarPenugasan extends AppCompatActivity implements View.OnClickLi
         Call<Assignment> call = RetrofitClient
                 .getRetrofitInstance()
                 .create(api.class)
-                .assignment(token,namaLokasi,alamatLokasi,kecamatan,kota);
+                .assignment(token, namaLokasi, alamatLokasi, kecamatan, kota);
 
         call.enqueue(new Callback<Assignment>() {
             @Override
             public void onResponse(Call<Assignment> call, Response<Assignment> response) {
-                Toast.makeText(DaftarPenugasan.this,"Success Daftar Penugasan",Toast.LENGTH_SHORT).show();
+                Toast.makeText(DaftarPenugasan.this, "Success Daftar Penugasan", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onFailure(Call<Assignment> call, Throwable t) {
-                Toast.makeText(DaftarPenugasan.this,"Error",Toast.LENGTH_SHORT).show();
+                Toast.makeText(DaftarPenugasan.this, "Error", Toast.LENGTH_SHORT).show();
             }
         });
     }

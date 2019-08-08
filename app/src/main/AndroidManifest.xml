@@ -26,9 +26,6 @@
             android:name=".activities.DetailPembayaran"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.QrCodeScanner"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".activities.QrCode"
             android:screenOrientation="portrait" />
         <activity

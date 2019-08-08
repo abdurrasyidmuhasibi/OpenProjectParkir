@@ -1,8 +1,8 @@
 package com.example.parkir.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,8 +39,8 @@ public class HomeKangParkir extends AppCompatActivity {
         call.enqueue(new Callback<AccountModel>() {
             @Override
             public void onResponse(Call<AccountModel> call, Response<AccountModel> response) {
-                txtBalance.setText("Rp. "+ response.body().getData().getDatas().getBalance());
-                txtName.setText(""+ response.body().getData().getDatas().getFullName());
+                txtBalance.setText("Rp. " + response.body().getData().getDatas().getBalance());
+                txtName.setText("" + response.body().getData().getDatas().getFullName());
             }
 
             @Override
@@ -53,12 +53,12 @@ public class HomeKangParkir extends AppCompatActivity {
         /* END LOAD CONTENT HOME */
     }
 
-    public void myQrCode(View view){
+    public void myQrCode(View view) {
         Intent i = new Intent(HomeKangParkir.this, QrCode.class);
         startActivity(i);
     }
 
-    public void myAkun(View view){
+    public void myAkun(View view) {
         Intent i = new Intent(HomeKangParkir.this, SettingAkun.class);
         startActivity(i);
     }

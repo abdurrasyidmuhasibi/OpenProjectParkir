@@ -1,8 +1,8 @@
 package com.example.parkir.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
@@ -20,22 +20,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View v){
-        switch (v.getId()){
+    public void onClick(View v) {
+        switch (v.getId()) {
             case R.id.home_login:
-                Intent moveLogin = new Intent(MainActivity.this,LoginPage.class);
+                Intent moveLogin = new Intent(MainActivity.this, LoginPage.class);
                 startActivity(moveLogin);
-            break;
+                break;
         }
     }
 
-    public void daftarKangParkir(View view){
-        Intent i = new Intent(MainActivity.this,DaftarKangParkir.class);
+    public void daftarKangParkir(View view) {
+        Intent i = new Intent(MainActivity.this, DaftarKangParkir.class);
         startActivity(i);
     }
 
-    public void daftarUser(View view){
-        Intent i = new Intent(MainActivity.this,DaftarUser.class);
+    public void daftarUser(View view) {
+        Intent i = new Intent(MainActivity.this, DaftarUser.class);
         startActivity(i);
     }
 }

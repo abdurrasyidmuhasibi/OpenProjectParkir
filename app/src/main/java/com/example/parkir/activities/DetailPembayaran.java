@@ -1,8 +1,8 @@
 package com.example.parkir.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +20,7 @@ import retrofit2.Response;
 public class DetailPembayaran extends AppCompatActivity {
 
     TextView txtName, txtLocationName, txtLocationAddress, txtNominal, txtAccountId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

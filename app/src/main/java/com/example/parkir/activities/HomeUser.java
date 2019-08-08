@@ -12,7 +12,6 @@ import com.example.parkir.R;
 import com.example.parkir.RetrofitClient;
 import com.example.parkir.api.api;
 import com.example.parkir.helpers.PreferenceHelper;
-import com.example.parkir.model.PaymentParking.PaymentParkingModel;
 import com.example.parkir.model.account.AccountModel;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
@@ -50,8 +49,8 @@ public class HomeUser extends AppCompatActivity {
         call.enqueue(new Callback<AccountModel>() {
             @Override
             public void onResponse(Call<AccountModel> call, Response<AccountModel> response) {
-                txtBalance.setText("Rp. "+ response.body().getData().getDatas().getBalance());
-                txtName.setText(""+ response.body().getData().getDatas().getFullName());
+                txtBalance.setText("Rp. " + response.body().getData().getDatas().getBalance());
+                txtName.setText("" + response.body().getData().getDatas().getFullName());
             }
 
             @Override
@@ -64,12 +63,12 @@ public class HomeUser extends AppCompatActivity {
         /* END LOAD CONTENT HOME */
     }
 
-    public void myScan(View view){
+    public void myScan(View view) {
         intentIntegrator = new IntentIntegrator(this);
         intentIntegrator.initiateScan();
     }
 
-    public void myAkun(View view){
+    public void myAkun(View view) {
         Intent i = new Intent(HomeUser.this, SettingAkun.class);
         startActivity(i);
     }
@@ -77,10 +76,10 @@ public class HomeUser extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-        if (result != null){
-            if (result.getContents() == null){
+        if (result != null) {
+            if (result.getContents() == null) {
                 Toast.makeText(this, "Hasil tidak ditemukan", Toast.LENGTH_SHORT).show();
-            }else{
+            } else {
                 /* GET JWT TOKEN */
                 PreferenceHelper prefShared = new PreferenceHelper(this);
                 String jwtToken = prefShared.getStr("jwtToken");
@@ -94,15 +93,15 @@ public class HomeUser extends AppCompatActivity {
                 call.enqueue(new Callback<AccountModel>() {
                     @Override
                     public void onResponse(Call<AccountModel> call, Response<AccountModel> response) {
-                        if (response.body().getData().getDatas().getAssignment().equals(null)){
+                        if (response.body().getData().getDatas().getAssignment().equals(null)) {
                             Toast.makeText(HomeUser.this, "Akun anda bukan akun tukang parkir.", Toast.LENGTH_SHORT).show();
-                        }else{
-                            Toast.makeText(HomeUser.this, "Sukses, tukang parkir anda adalah "+ response.body().getData().getDatas().getFullName(), Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(HomeUser.this, "Sukses, tukang parkir anda adalah " + response.body().getData().getDatas().getFullName(), Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(HomeUser.this, DetailPembayaran.class);
                             intent.putExtra("accountid", response.body().getData().getDatas().getId().toString());
                             intent.putExtra("name", response.body().getData().getDatas().getFullName());
                             intent.putExtra("location_name", response.body().getData().getDatas().getAssignment().getLocationName());
-                            intent.putExtra("location_address", response.body().getData().getDatas().getAssignment().getLocationAddress() +"," + response.body().getData().getDatas().getAssignment().getDistrict() +","+ response.body().getData().getDatas().getAssignment().getCity() +",");
+                            intent.putExtra("location_address", response.body().getData().getDatas().getAssignment().getLocationAddress() + "," + response.body().getData().getDatas().getAssignment().getDistrict() + "," + response.body().getData().getDatas().getAssignment().getCity() + ",");
                             intent.putExtra("nominal", "Rp. 2000");
                             startActivity(intent);
                         }
@@ -117,7 +116,7 @@ public class HomeUser extends AppCompatActivity {
                 });
                 /* END LOAD CONTENT HOME */
             }
-        }else{
+        } else {
             super.onActivityResult(requestCode, resultCode, data);
         }
     }

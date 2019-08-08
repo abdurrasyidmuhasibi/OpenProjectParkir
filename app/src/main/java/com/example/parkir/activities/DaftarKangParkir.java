@@ -1,8 +1,8 @@
 package com.example.parkir.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -37,7 +37,7 @@ public class DaftarKangParkir extends AppCompatActivity implements View.OnClickL
         findViewById(R.id.btn_daftar).setOnClickListener(this);
     }
 
-    private void daftarUser(){
+    private void daftarUser() {
         String nama = etNama.getText().toString().trim();
         String email = etEmail.getText().toString().trim();
         String alamat = etAlamat.getText().toString().trim();
@@ -47,43 +47,43 @@ public class DaftarKangParkir extends AppCompatActivity implements View.OnClickL
         Call<RegisterModel> call = RetrofitClient
                 .getRetrofitInstance()
                 .create(api.class)
-                .register(roleid,username,password,nama,email,alamat);
+                .register(roleid, username, password, nama, email, alamat);
 
         call.enqueue(new Callback<RegisterModel>() {
             @Override
             public void onResponse(Call<RegisterModel> call, Response<RegisterModel> response) {
-                Toast.makeText(DaftarKangParkir.this,"Success Daftar KangParkir",Toast.LENGTH_SHORT).show();
+                Toast.makeText(DaftarKangParkir.this, "Success Daftar KangParkir", Toast.LENGTH_SHORT).show();
                 Call<LoginModel> login = RetrofitClient
                         .getRetrofitInstance()
                         .create(api.class)
-                        .logins(username,password);
+                        .logins(username, password);
                 login.enqueue(new Callback<LoginModel>() {
                     @Override
                     public void onResponse(Call<LoginModel> call, Response<LoginModel> response) {
-                        Toast.makeText(DaftarKangParkir.this,"Berhasil Login, Lanjut Daftar Penugasan",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DaftarKangParkir.this, "Berhasil Login, Lanjut Daftar Penugasan", Toast.LENGTH_SHORT).show();
                         processSaveToken(response.body().getData().getDatas().getJwtTokenData(), response.body().getData().getDatas().getAccountData().getAccountRole().getId().toString(), response.body().getData().getDatas().getAccountData().getId().toString());
                     }
 
                     @Override
                     public void onFailure(Call<LoginModel> call, Throwable t) {
-                        Toast.makeText(DaftarKangParkir.this,"Gabisa Lanjut ke Penugasan",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DaftarKangParkir.this, "Gabisa Lanjut ke Penugasan", Toast.LENGTH_SHORT).show();
                     }
                 });
             }
 
             @Override
             public void onFailure(Call<RegisterModel> call, Throwable t) {
-                Toast.makeText(DaftarKangParkir.this,"Error",Toast.LENGTH_SHORT).show();
+                Toast.makeText(DaftarKangParkir.this, "Error", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn_daftar:
                 daftarUser();
-                Intent i = new Intent(DaftarKangParkir.this,DaftarPenugasan.class);
+                Intent i = new Intent(DaftarKangParkir.this, DaftarPenugasan.class);
                 startActivity(i);
                 break;
         }
@@ -91,13 +91,13 @@ public class DaftarKangParkir extends AppCompatActivity implements View.OnClickL
 
     private void processSaveToken(String jwtToken, String roleid, String accountid) {
         PreferenceHelper prefShared = new PreferenceHelper(this);
-        prefShared.setStr("jwtToken", "Bearer "+jwtToken);
+        prefShared.setStr("jwtToken", "Bearer " + jwtToken);
         prefShared.setStr("roleid", roleid);
         prefShared.setStr("accountid", accountid);
-        if (roleid.equals("1")){
+        if (roleid.equals("1")) {
             Intent i = new Intent(DaftarKangParkir.this, DaftarPenugasan.class);
             startActivity(i);
-        }else{
+        } else {
             Intent i = new Intent(DaftarKangParkir.this, HomeUser.class);
             startActivity(i);
         }

@@ -2,8 +2,8 @@ package com.example.parkir.activities;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -17,6 +17,7 @@ import com.journeyapps.barcodescanner.BarcodeEncoder;
 
 public class QrCode extends AppCompatActivity {
     private ImageView imageView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +30,7 @@ public class QrCode extends AppCompatActivity {
 
         MultiFormatWriter multiFormatWriter = new MultiFormatWriter();
         try {
-            BitMatrix bitMatrix = multiFormatWriter.encode(text2Qr, BarcodeFormat.QR_CODE,200,200);
+            BitMatrix bitMatrix = multiFormatWriter.encode(text2Qr, BarcodeFormat.QR_CODE, 200, 200);
             BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
             Bitmap bitmap = barcodeEncoder.createBitmap(bitMatrix);
             imageView.setImageBitmap(bitmap);
@@ -38,12 +39,12 @@ public class QrCode extends AppCompatActivity {
         }
     }
 
-    public void myHome(View view){
-        Intent i = new Intent(QrCode.this,HomeUser.class);
+    public void myHome(View view) {
+        Intent i = new Intent(QrCode.this, HomeUser.class);
         startActivity(i);
     }
 
-    public void myAkun(View view){
+    public void myAkun(View view) {
         Intent i = new Intent(QrCode.this, SettingAkun.class);
         startActivity(i);
     }

@@ -17,7 +17,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class LoginPage extends AppCompatActivity implements View.OnClickListener{
+public class LoginPage extends AppCompatActivity implements View.OnClickListener {
 
     private EditText etUsername, etPassword;
     api mApiInterface;
@@ -36,14 +36,14 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn_login:
                 userLogin();
                 break;
         }
     }
 
-    private void userLogin(){
+    private void userLogin() {
         String username = etUsername.getText().toString().trim();
         String password = etPassword.getText().toString().trim();
 
@@ -53,56 +53,56 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
         postLoginCall.enqueue(new Callback<LoginModel>() {
             @Override
             public void onResponse(Call<LoginModel> call, Response<LoginModel> response) {
-                if(response.isSuccessful()){
-                    Toast.makeText(LoginPage.this,"Success, Selamat datang "+ response.body().getData().getDatas().getAccountData().getFullName(),Toast.LENGTH_LONG).show();
+                if (response.isSuccessful()) {
+                    Toast.makeText(LoginPage.this, "Success, Selamat datang " + response.body().getData().getDatas().getAccountData().getFullName(), Toast.LENGTH_LONG).show();
 
                     processSaveToken(response.body().getData().getDatas().getJwtTokenData(), response.body().getData().getDatas().getAccountData().getAccountRole().getId().toString(), response.body().getData().getDatas().getAccountData().getId().toString());
-                }else{
-                    Toast.makeText(LoginPage.this,"Error",Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(LoginPage.this, "Error", Toast.LENGTH_LONG).show();
                 }
             }
 
             @Override
             public void onFailure(Call<LoginModel> call, Throwable t) {
-                Toast.makeText(LoginPage.this,"Error failure",Toast.LENGTH_LONG).show();
+                Toast.makeText(LoginPage.this, "Error failure", Toast.LENGTH_LONG).show();
             }
         });
     }
 
     private void processSaveToken(String jwtToken, String roleid, String accountid) {
         PreferenceHelper prefShared = new PreferenceHelper(this);
-        prefShared.setStr("jwtToken", "Bearer "+jwtToken);
+        prefShared.setStr("jwtToken", "Bearer " + jwtToken);
         prefShared.setStr("roleid", roleid);
         prefShared.setStr("accountid", accountid);
-        if (roleid.equals("1")){
+        if (roleid.equals("1")) {
             Intent i = new Intent(LoginPage.this, HomeKangParkir.class);
             startActivity(i);
-        }else{
+        } else {
             Intent i = new Intent(LoginPage.this, HomeUser.class);
             startActivity(i);
         }
     }
 
-    private void autoLogin(){
+    private void autoLogin() {
         PreferenceHelper prefShared = new PreferenceHelper(this);
         String jwtToken = prefShared.getStr("jwtToken");
         String accountid = prefShared.getStr("accountid");
         String roleid = prefShared.getStr("roleid");
 
         if (jwtToken != null) {
-            if (accountid != null){
-                if (roleid.equals("1")){
+            if (accountid != null) {
+                if (roleid.equals("1")) {
                     Intent i = new Intent(LoginPage.this, HomeKangParkir.class);
                     startActivity(i);
-                }else{
+                } else {
                     Intent i = new Intent(LoginPage.this, HomeUser.class);
                     startActivity(i);
                 }
-            }else{
+            } else {
                 Toast.makeText(LoginPage.this, "Silahkan re-login terlebih dahulu.", Toast.LENGTH_LONG).show();
             }
 
-        }else{
+        } else {
             Toast.makeText(LoginPage.this, "Silahkan login terlebih dahulu.", Toast.LENGTH_LONG).show();
         }
     }

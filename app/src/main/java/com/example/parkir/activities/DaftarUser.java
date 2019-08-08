@@ -35,7 +35,7 @@ public class DaftarUser extends AppCompatActivity implements View.OnClickListene
         findViewById(R.id.btn_daftar).setOnClickListener(this);
     }
 
-    private void daftarUser(){
+    private void daftarUser() {
         String nama = etNama.getText().toString().trim();
         String email = etEmail.getText().toString().trim();
         String alamat = etAlamat.getText().toString().trim();
@@ -45,27 +45,27 @@ public class DaftarUser extends AppCompatActivity implements View.OnClickListene
         Call<RegisterModel> call = RetrofitClient
                 .getRetrofitInstance()
                 .create(api.class)
-                .register(roleid,username,password,nama,email,alamat);
+                .register(roleid, username, password, nama, email, alamat);
 
         call.enqueue(new Callback<RegisterModel>() {
             @Override
             public void onResponse(Call<RegisterModel> call, Response<RegisterModel> response) {
-                Toast.makeText(DaftarUser.this,"Success Daftar User",Toast.LENGTH_SHORT).show();
+                Toast.makeText(DaftarUser.this, "Success Daftar User", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onFailure(Call<RegisterModel> call, Throwable t) {
-                Toast.makeText(DaftarUser.this,"Error",Toast.LENGTH_SHORT).show();
+                Toast.makeText(DaftarUser.this, "Error", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn_daftar:
                 daftarUser();
-                Intent i = new Intent(DaftarUser.this,HomeUser.class);
+                Intent i = new Intent(DaftarUser.this, HomeUser.class);
                 startActivity(i);
                 break;
         }
