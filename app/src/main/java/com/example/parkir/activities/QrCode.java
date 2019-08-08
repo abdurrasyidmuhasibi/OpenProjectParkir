@@ -44,7 +44,7 @@ public class QrCode extends AppCompatActivity {
     }
 
     public void myAkun(View view){
-        Intent i = new Intent(QrCode.this,SettingLogout.class);
+        Intent i = new Intent(QrCode.this, SettingAkun.class);
         startActivity(i);
     }
 }

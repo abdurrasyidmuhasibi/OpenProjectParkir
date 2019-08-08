@@ -7,7 +7,7 @@ import android.view.View;
 
 import com.example.parkir.R;
 
-public class SettingLogout extends AppCompatActivity {
+public class SettingAkun extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +16,7 @@ public class SettingLogout extends AppCompatActivity {
     }
 
     public void myHome(View view){
-        Intent i = new Intent(SettingLogout.this,HomeUser.class);
+        Intent i = new Intent(SettingAkun.this,HomeUser.class);
         startActivity(i);
     }
 }
