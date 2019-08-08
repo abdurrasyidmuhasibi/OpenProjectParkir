@@ -2,6 +2,7 @@ package com.example.parkir.api;
 
 import com.example.parkir.model.PaymentParking.PaymentParkingModel;
 import com.example.parkir.model.account.AccountModel;
+import com.example.parkir.model.account.Assignment;
 import com.example.parkir.model.daftar.RegisterModel;
 import com.example.parkir.model.login.LoginModel;
 
@@ -30,6 +31,15 @@ public interface api {
         @Field("full_name") String nama,
         @Field("email") String email,
         @Field("address") String alamat
+    );
+
+    @FormUrlEncoded
+    @POST("assignments/")
+    Call<Assignment> assignment(
+            @Field("location_name") String namaLokasi,
+            @Field("location_address") String alamatLokasi,
+            @Field("district") String kecamatan,
+            @Field("city") String kota
     );
 
     @GET("accounts/")

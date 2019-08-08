@@ -11,8 +11,6 @@ import com.example.parkir.RetrofitClient;
 import com.example.parkir.api.api;
 import com.example.parkir.model.daftar.RegisterModel;
 
-import java.io.IOException;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -27,10 +25,10 @@ public class DaftarUser extends AppCompatActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daftar_user);
 
-        etNama = (EditText) findViewById(R.id.et_nama);
-        etEmail = (EditText) findViewById(R.id.et_email);
-        etAlamat = (EditText) findViewById(R.id.et_alamat);
-        etUsername = (EditText) findViewById(R.id.et_username);
+        etNama = (EditText) findViewById(R.id.et_namaLokasi);
+        etEmail = (EditText) findViewById(R.id.et_alamatLokasi);
+        etAlamat = (EditText) findViewById(R.id.et_kecamatan);
+        etUsername = (EditText) findViewById(R.id.et_kota);
         etPassword = (EditText) findViewById(R.id.et_password);
 
         findViewById(R.id.btn_daftar).setOnClickListener(this);

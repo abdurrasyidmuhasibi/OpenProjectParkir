@@ -26,10 +26,10 @@ public class DaftarKangParkir extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daftar_kang_parkir);
 
-        etNama = (EditText) findViewById(R.id.et_nama);
-        etEmail = (EditText) findViewById(R.id.et_email);
-        etAlamat = (EditText) findViewById(R.id.et_alamat);
-        etUsername = (EditText) findViewById(R.id.et_username);
+        etNama = (EditText) findViewById(R.id.et_namaLokasi);
+        etEmail = (EditText) findViewById(R.id.et_alamatLokasi);
+        etAlamat = (EditText) findViewById(R.id.et_kecamatan);
+        etUsername = (EditText) findViewById(R.id.et_kota);
         etPassword = (EditText) findViewById(R.id.et_password);
 
         findViewById(R.id.btn_daftar).setOnClickListener(this);
