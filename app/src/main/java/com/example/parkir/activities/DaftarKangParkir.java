@@ -11,6 +11,7 @@ import com.example.parkir.R;
 import com.example.parkir.RetrofitClient;
 import com.example.parkir.api.api;
 import com.example.parkir.model.daftar.RegisterModel;
+import com.example.parkir.model.login.LoginModel;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -39,8 +40,8 @@ public class DaftarKangParkir extends AppCompatActivity implements View.OnClickL
         String nama = etNama.getText().toString().trim();
         String email = etEmail.getText().toString().trim();
         String alamat = etAlamat.getText().toString().trim();
-        String username = etUsername.getText().toString().trim();
-        String password = etPassword.getText().toString().trim();
+        final String username = etUsername.getText().toString().trim();
+        final String password = etPassword.getText().toString().trim();
 
         Call<RegisterModel> call = RetrofitClient
                 .getRetrofitInstance()
@@ -51,6 +52,21 @@ public class DaftarKangParkir extends AppCompatActivity implements View.OnClickL
             @Override
             public void onResponse(Call<RegisterModel> call, Response<RegisterModel> response) {
                 Toast.makeText(DaftarKangParkir.this,"Success Daftar KangParkir",Toast.LENGTH_SHORT).show();
+                Call<LoginModel> login = RetrofitClient
+                        .getRetrofitInstance()
+                        .create(api.class)
+                        .logins(username,password);
+                login.enqueue(new Callback<LoginModel>() {
+                    @Override
+                    public void onResponse(Call<LoginModel> call, Response<LoginModel> response) {
+                        Toast.makeText(DaftarKangParkir.this,"Berhasil Login, Lanjut Daftar Penugasan",Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onFailure(Call<LoginModel> call, Throwable t) {
+                        Toast.makeText(DaftarKangParkir.this,"Gabisa Lanjut ke Penugasan",Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
 
             @Override

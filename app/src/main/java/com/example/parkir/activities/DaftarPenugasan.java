@@ -1,5 +1,6 @@
 package com.example.parkir.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -38,6 +39,8 @@ public class DaftarPenugasan extends AppCompatActivity implements View.OnClickLi
         switch (v.getId()){
             case R.id.btn_daftar:
                 daftarPenugasan();
+                Intent i = new Intent(DaftarPenugasan.this,HomeKangParkir.class);
+                startActivity(i);
                 break;
         }
     }

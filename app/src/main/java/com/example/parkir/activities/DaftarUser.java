@@ -1,5 +1,6 @@
 package com.example.parkir.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -64,6 +65,8 @@ public class DaftarUser extends AppCompatActivity implements View.OnClickListene
         switch (v.getId()){
             case R.id.btn_daftar:
                 daftarUser();
+                Intent i = new Intent(DaftarUser.this,HomeUser.class);
+                startActivity(i);
                 break;
         }
     }
