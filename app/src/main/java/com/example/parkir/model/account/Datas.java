@@ -24,6 +24,9 @@ public class Datas {
     @SerializedName("account_role")
     @Expose
     private AccountRole accountRole;
+    @SerializedName("assignment")
+    @Expose
+    private Assignment assignment;
 
     public Integer getId() {
         return id;
@@ -73,4 +76,11 @@ public class Datas {
         this.accountRole = accountRole;
     }
 
+    public Assignment getAssignment() {
+        return assignment;
+    }
+
+    public void setAssignment(Assignment assignment) {
+        this.assignment = assignment;
+    }
 }
