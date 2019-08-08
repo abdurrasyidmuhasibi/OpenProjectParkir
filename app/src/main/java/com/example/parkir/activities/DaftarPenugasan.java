@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -20,6 +21,7 @@ import retrofit2.Response;
 
 public class DaftarPenugasan extends AppCompatActivity implements View.OnClickListener {
 
+    CheckBox cbSyarat;
     EditText etNamaLokasi, etAlamatLokasi, etKecamatan, etKota;
 
     @Override
@@ -27,6 +29,7 @@ public class DaftarPenugasan extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daftar_penugasan);
 
+        cbSyarat = (CheckBox) findViewById(R.id.cb_syarat);
         etNamaLokasi = (EditText) findViewById(R.id.et_namaLokasi);
         etAlamatLokasi = (EditText) findViewById(R.id.et_alamatLokasi);
         etKecamatan = (EditText) findViewById(R.id.et_kecamatan);
@@ -39,10 +42,15 @@ public class DaftarPenugasan extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_daftar:
-                daftarPenugasan();
-                Intent i = new Intent(DaftarPenugasan.this,HomeKangParkir.class);
-                startActivity(i);
-                break;
+                if(cbSyarat.isChecked()){
+                    daftarPenugasan();
+                    Intent i = new Intent(DaftarPenugasan.this,HomeKangParkir.class);
+                    startActivity(i);
+                    break;
+                } else {
+                    Toast.makeText(DaftarPenugasan.this,"Centang Syarat & Ketentuan untuk melanjutkan Pendaftaran",Toast.LENGTH_SHORT).show();
+                    break;
+                }
         }
     }
 
