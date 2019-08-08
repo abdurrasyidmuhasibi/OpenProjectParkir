@@ -21,6 +21,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import static java.lang.Integer.parseInt;
+
 public class HomeUser extends AppCompatActivity {
 
     private Button btnScan;
@@ -84,23 +86,36 @@ public class HomeUser extends AppCompatActivity {
                 String jwtToken = prefShared.getStr("jwtToken");
                 /* GET JWT TOKEN */
 
-                String receiverid = result.getContents();
+                /* KANG PARKIR ID */
+                Integer accountid = parseInt(result.getContents());
                 /*Create handle for the RetrofitInstance interface*/
                 api service = RetrofitClient.getRetrofitInstance().create(api.class);
-                Call<PaymentParkingModel> call = service.payments(jwtToken, receiverid);
-                call.enqueue(new Callback<PaymentParkingModel>() {
+                Call<AccountModel> call = service.account_parkir(jwtToken, accountid);
+                call.enqueue(new Callback<AccountModel>() {
                     @Override
-                    public void onResponse(Call<PaymentParkingModel> call, Response<PaymentParkingModel> response) {
-                        Toast.makeText(HomeUser.this, "" + response.body().getData().getMessage(), Toast.LENGTH_SHORT).show();
+                    public void onResponse(Call<AccountModel> call, Response<AccountModel> response) {
+                        if (response.body().getData().getDatas().getAssignment().equals(null)){
+                            Toast.makeText(HomeUser.this, "Akun anda bukan akun tukang parkir.", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(HomeUser.this, "Sukses, tukang parkir anda adalah "+ response.body().getData().getDatas().getFullName(), Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(HomeUser.this, DetailPembayaran.class);
+                            intent.putExtra("accountid", response.body().getData().getDatas().getId().toString());
+                            intent.putExtra("name", response.body().getData().getDatas().getFullName());
+                            intent.putExtra("location_name", response.body().getData().getDatas().getAssignment().getLocationName());
+                            intent.putExtra("location_address", response.body().getData().getDatas().getAssignment().getLocationAddress() +"," + response.body().getData().getDatas().getAssignment().getDistrict() +","+ response.body().getData().getDatas().getAssignment().getCity() +",");
+                            intent.putExtra("nominal", "Rp. 2000");
+                            startActivity(intent);
+                        }
                     }
 
                     @Override
-                    public void onFailure(Call<PaymentParkingModel> call, Throwable t) {
+                    public void onFailure(Call<AccountModel> call, Throwable t) {
                         Toast.makeText(HomeUser.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
                     }
 
 
                 });
+                /* END LOAD CONTENT HOME */
             }
         }else{
             super.onActivityResult(requestCode, resultCode, data);

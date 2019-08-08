@@ -19,6 +19,9 @@ public class Data_ {
     private Sender sender;
     @SerializedName("receiver")
     @Expose
+    private String locationDetail;
+    @SerializedName("location_detail")
+    @Expose
     private Receiver receiver;
 
     public Integer getId() {
@@ -61,4 +64,11 @@ public class Data_ {
         this.receiver = receiver;
     }
 
+    public String getLocationDetail() {
+        return locationDetail;
+    }
+
+    public void setLocationDetail(String locationDetail) {
+        this.locationDetail = locationDetail;
+    }
 }

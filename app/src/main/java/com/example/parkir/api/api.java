@@ -11,6 +11,7 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 
 public interface api {
     @FormUrlEncoded
@@ -33,6 +34,9 @@ public interface api {
 
     @GET("accounts/")
     Call<AccountModel> account(@Header("Authorization") String token);
+
+    @GET("accounts/parkirs/{accountid}")
+    Call<AccountModel> account_parkir(@Header("Authorization") String token, @Path("accountid") int accountid);
 
     @FormUrlEncoded
     @POST("payments/")
