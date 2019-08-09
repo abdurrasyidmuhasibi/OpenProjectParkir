@@ -62,7 +62,7 @@ public class DetailPembayaran extends AppCompatActivity {
             @Override
             public void onResponse(Call<PaymentParkingModel> call, Response<PaymentParkingModel> response) {
                 Toast.makeText(DetailPembayaran.this, "" + response.body().getData().getMessage(), Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(DetailPembayaran.this, HomeUser.class);
+                Intent intent = new Intent(DetailPembayaran.this, Success.class);
                 startActivity(intent);
             }
 

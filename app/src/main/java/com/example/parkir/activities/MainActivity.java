@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.home_login:
                 Intent moveLogin = new Intent(MainActivity.this, LoginPage.class);
                 startActivity(moveLogin);
-                break;
         }
     }
 

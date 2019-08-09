@@ -85,7 +85,6 @@ public class DaftarKangParkir extends AppCompatActivity implements View.OnClickL
                 daftarUser();
                 Intent i = new Intent(DaftarKangParkir.this, DaftarPenugasan.class);
                 startActivity(i);
-                break;
         }
     }
 

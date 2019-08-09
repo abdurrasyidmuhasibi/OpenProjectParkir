@@ -45,10 +45,8 @@ public class DaftarPenugasan extends AppCompatActivity implements View.OnClickLi
                     daftarPenugasan();
                     Intent i = new Intent(DaftarPenugasan.this, HomeKangParkir.class);
                     startActivity(i);
-                    break;
                 } else {
                     Toast.makeText(DaftarPenugasan.this, "Centang Syarat & Ketentuan untuk melanjutkan Pendaftaran", Toast.LENGTH_SHORT).show();
-                    break;
                 }
         }
     }

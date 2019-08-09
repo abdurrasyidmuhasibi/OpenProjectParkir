@@ -67,7 +67,6 @@ public class DaftarUser extends AppCompatActivity implements View.OnClickListene
                 daftarUser();
                 Intent i = new Intent(DaftarUser.this, HomeUser.class);
                 startActivity(i);
-                break;
         }
     }
 }
