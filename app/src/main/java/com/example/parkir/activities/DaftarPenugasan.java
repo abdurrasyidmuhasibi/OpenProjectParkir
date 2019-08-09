@@ -77,4 +77,12 @@ public class DaftarPenugasan extends AppCompatActivity implements View.OnClickLi
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(), DaftarKangParkir.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
 }

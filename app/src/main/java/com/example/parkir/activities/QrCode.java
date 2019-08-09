@@ -48,4 +48,12 @@ public class QrCode extends AppCompatActivity {
         Intent i = new Intent(QrCode.this, SettingAkun.class);
         startActivity(i);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(), HomeUser.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
 }

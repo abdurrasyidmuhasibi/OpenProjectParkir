@@ -106,4 +106,12 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
             Toast.makeText(LoginPage.this, "Silahkan login terlebih dahulu.", Toast.LENGTH_LONG).show();
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
 }

@@ -17,8 +17,15 @@ public class SettingAkun extends AppCompatActivity {
     }
 
     public void myHome(View view) {
-        Intent i = new Intent(SettingAkun.this, HomeUser.class);
-        startActivity(i);
+        PreferenceHelper prefShared = new PreferenceHelper(this);
+        String roleid = prefShared.getStr("roleid");
+        if(roleid.equals("1")){
+            Intent i = new Intent(SettingAkun.this,HomeKangParkir.class);
+            startActivity(i);
+        } else if(roleid.equals("2")){
+            Intent i = new Intent(SettingAkun.this,HomeUser.class);
+            startActivity(i);
+        }
     }
 
     public void clickLogout(View view) {
@@ -29,4 +36,21 @@ public class SettingAkun extends AppCompatActivity {
         Intent i = new Intent(SettingAkun.this, MainActivity.class);
         startActivity(i);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        PreferenceHelper prefShared = new PreferenceHelper(this);
+        String roleid = prefShared.getStr("roleid");
+        if(roleid.equals("1")){
+            Intent intent = new Intent(getApplicationContext(), HomeKangParkir.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+        } else if(roleid.equals("2")){
+            Intent intent = new Intent(getApplicationContext(), HomeUser.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+        }
+    }
+
 }

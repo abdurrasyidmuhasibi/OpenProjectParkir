@@ -62,4 +62,12 @@ public class HomeKangParkir extends AppCompatActivity {
         Intent i = new Intent(HomeKangParkir.this, SettingAkun.class);
         startActivity(i);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
 }
