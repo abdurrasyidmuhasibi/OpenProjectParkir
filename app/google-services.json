@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "287479877022",
+    "firebase_url": "https://zravcms.firebaseio.com",
+    "project_id": "zravcms",
+    "storage_bucket": "zravcms.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287479877022:android:b24386e5aaf2dfbd",
+        "android_client_info": {
+          "package_name": "com.example.parkir"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "287479877022-jpu65inqnsanpbrqipb9m07c4hmpecrg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.parkir",
+            "certificate_hash": "648fbbb997a631adb7b8d39cc226a671d1c43b86"
+          }
+        },
+        {
+          "client_id": "287479877022-eau81b407tabkpon71ruhnqlflai41q8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW7R6kPiPI3vxPTNM-usrKQTPGMM75Sn4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "287479877022-eau81b407tabkpon71ruhnqlflai41q8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

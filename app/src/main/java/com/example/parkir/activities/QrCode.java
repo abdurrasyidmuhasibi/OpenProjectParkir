@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.parkir.R;
 import com.example.parkir.helpers.PreferenceHelper;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
@@ -26,7 +28,8 @@ public class QrCode extends AppCompatActivity {
         imageView = (ImageView) this.findViewById(R.id.imageView);
 
         PreferenceHelper prefShared = new PreferenceHelper(this);
-        String text2Qr = prefShared.getStr("accountid");
+        final String token = FirebaseInstanceId.getInstance().getToken();
+        String text2Qr = token +";"+ prefShared.getStr("accountid");
 
         MultiFormatWriter multiFormatWriter = new MultiFormatWriter();
         try {

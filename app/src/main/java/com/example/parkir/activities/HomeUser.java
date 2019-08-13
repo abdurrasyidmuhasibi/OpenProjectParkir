@@ -75,7 +75,7 @@ public class HomeUser extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        final IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (result != null) {
             if (result.getContents() == null) {
                 Toast.makeText(this, "Hasil tidak ditemukan", Toast.LENGTH_SHORT).show();
@@ -85,8 +85,18 @@ public class HomeUser extends AppCompatActivity {
                 String jwtToken = prefShared.getStr("jwtToken");
                 /* GET JWT TOKEN */
 
+                /* SPLIT */
+                final String s = result.getContents();
+                String[] arrayString = s.split(";");
+
+                final String fcmToken = arrayString[0];
+                Integer accountid = parseInt(arrayString[1]);
+
                 /* KANG PARKIR ID */
-                Integer accountid = parseInt(result.getContents());
+//                Integer accountid = parseInt(result.getContents());
+                Toast.makeText(HomeUser.this, "" +accountid, Toast.LENGTH_SHORT).show();
+
+
                 /*Create handle for the RetrofitInstance interface*/
                 api service = RetrofitClient.getRetrofitInstance().create(api.class);
                 Call<AccountModel> call = service.account_parkir(jwtToken, accountid);
@@ -98,6 +108,7 @@ public class HomeUser extends AppCompatActivity {
                         } else {
                             Toast.makeText(HomeUser.this, "Sukses, tukang parkir anda adalah " + response.body().getData().getDatas().getFullName(), Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(HomeUser.this, DetailPembayaran.class);
+                            intent.putExtra("fcmToken", fcmToken);
                             intent.putExtra("accountid", response.body().getData().getDatas().getId().toString());
                             intent.putExtra("name", response.body().getData().getDatas().getFullName());
                             intent.putExtra("location_name", response.body().getData().getDatas().getAssignment().getLocationName());

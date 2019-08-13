@@ -5,6 +5,7 @@ import com.example.parkir.model.account.AccountModel;
 import com.example.parkir.model.account.Assignment;
 import com.example.parkir.model.daftar.RegisterModel;
 import com.example.parkir.model.login.LoginModel;
+import com.example.parkir.model.notification.NotificationModel;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -54,6 +55,16 @@ public interface api {
     @POST("payments/")
     Call<PaymentParkingModel> payments(
             @Header("Authorization") String token,
-            @Field("receiverid") String receiverid
+            @Field("receiverid") String receiverid,
+            @Field("parking_typeid") String parkingtypeid,
+            @Field("vehicle_registration") String vehicle_registration
+    );
+
+    @FormUrlEncoded
+    @POST("payments/")
+    Call<NotificationModel> notifications(
+            @Field("token") String fcmToken,
+            @Field("nominal") String nominal,
+            @Field("vehicle_registration") String vehicle_registration
     );
 }
