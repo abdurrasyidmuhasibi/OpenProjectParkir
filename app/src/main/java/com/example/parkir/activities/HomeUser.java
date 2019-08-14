@@ -69,7 +69,7 @@ public class HomeUser extends AppCompatActivity {
     }
 
     public void myAkun(View view) {
-        Intent i = new Intent(HomeUser.this, SettingAkun.class);
+        Intent i = new Intent(HomeUser.this, SettingUser.class);
         startActivity(i);
     }
 

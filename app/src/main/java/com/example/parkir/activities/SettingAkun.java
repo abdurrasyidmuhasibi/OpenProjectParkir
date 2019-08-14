@@ -19,11 +19,11 @@ public class SettingAkun extends AppCompatActivity {
     public void myHome(View view) {
         PreferenceHelper prefShared = new PreferenceHelper(this);
         String roleid = prefShared.getStr("roleid");
-        if(roleid.equals("1")){
-            Intent i = new Intent(SettingAkun.this,HomeKangParkir.class);
+        if (roleid.equals("1")) {
+            Intent i = new Intent(SettingAkun.this, HomeKangParkir.class);
             startActivity(i);
-        } else if(roleid.equals("2")){
-            Intent i = new Intent(SettingAkun.this,HomeUser.class);
+        } else if (roleid.equals("2")) {
+            Intent i = new Intent(SettingAkun.this, HomeUser.class);
             startActivity(i);
         }
     }
@@ -42,15 +42,14 @@ public class SettingAkun extends AppCompatActivity {
         super.onBackPressed();
         PreferenceHelper prefShared = new PreferenceHelper(this);
         String roleid = prefShared.getStr("roleid");
-        if(roleid.equals("1")){
+        if (roleid.equals("1")) {
             Intent intent = new Intent(getApplicationContext(), HomeKangParkir.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
-        } else if(roleid.equals("2")){
+        } else if (roleid.equals("2")) {
             Intent intent = new Intent(getApplicationContext(), HomeUser.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
         }
     }
-
 }

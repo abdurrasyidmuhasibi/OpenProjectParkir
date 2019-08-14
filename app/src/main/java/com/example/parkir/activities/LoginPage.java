@@ -3,7 +3,10 @@ package com.example.parkir.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -20,6 +23,7 @@ import retrofit2.Response;
 public class LoginPage extends AppCompatActivity implements View.OnClickListener {
 
     private EditText etUsername, etPassword;
+    private CheckBox showPass;
     api mApiInterface;
 
     @Override
@@ -28,10 +32,12 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
         setContentView(R.layout.activity_login_page);
 
         autoLogin();
-        etUsername = (EditText) findViewById(R.id.et_kota);
+        etUsername = (EditText) findViewById(R.id.et_username);
         etPassword = (EditText) findViewById(R.id.et_password);
+        showPass = (CheckBox) findViewById(R.id.showPass);
 
         findViewById(R.id.btn_login).setOnClickListener(this);
+        showPass.setOnClickListener(this);
     }
 
     @Override
@@ -40,6 +46,12 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
             case R.id.btn_login:
                 userLogin();
                 break;
+            case R.id.showPass:
+                if(showPass.isChecked()){
+                    etPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                } else {
+                    etPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                } break;
         }
     }
 
@@ -55,16 +67,15 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
             public void onResponse(Call<LoginModel> call, Response<LoginModel> response) {
                 if (response.isSuccessful()) {
                     Toast.makeText(LoginPage.this, "Success, Selamat datang " + response.body().getData().getDatas().getAccountData().getFullName(), Toast.LENGTH_LONG).show();
-
                     processSaveToken(response.body().getData().getDatas().getJwtTokenData(), response.body().getData().getDatas().getAccountData().getAccountRole().getId().toString(), response.body().getData().getDatas().getAccountData().getId().toString());
                 } else {
-                    Toast.makeText(LoginPage.this, "Error", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginPage.this, "Username/Password Salah!", Toast.LENGTH_LONG).show();
                 }
             }
 
             @Override
             public void onFailure(Call<LoginModel> call, Throwable t) {
-                Toast.makeText(LoginPage.this, "Error failure", Toast.LENGTH_LONG).show();
+                Toast.makeText(LoginPage.this, "Error, harap periksa koneksi Internet Anda!", Toast.LENGTH_LONG).show();
             }
         });
     }

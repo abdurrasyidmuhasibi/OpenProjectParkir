@@ -3,6 +3,7 @@ package com.example.parkir.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -41,13 +42,21 @@ public class DaftarPenugasan extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_daftar:
-                if (cbSyarat.isChecked()) {
+                if(TextUtils.isEmpty(etNamaLokasi.getText().toString().trim())){
+                    etNamaLokasi.setError("Nama Lokasi diperlukan!");
+                } else if(TextUtils.isEmpty(etAlamatLokasi.getText().toString().trim())){
+                    etAlamatLokasi.setError("Alamat Lokasi diperlukan!");
+                } else if(TextUtils.isEmpty(etKecamatan.getText().toString().trim())){
+                    etKecamatan.setError("Kecamatan diperlukan!");
+                } else if(TextUtils.isEmpty(etKota.getText().toString().trim())){
+                    etKota.setError("Kota diperlukan!");
+                } else if (cbSyarat.isChecked()) {
                     daftarPenugasan();
                     Intent i = new Intent(DaftarPenugasan.this, HomeKangParkir.class);
                     startActivity(i);
                 } else {
                     Toast.makeText(DaftarPenugasan.this, "Centang Syarat & Ketentuan untuk melanjutkan Pendaftaran", Toast.LENGTH_SHORT).show();
-                }
+                } break;
         }
     }
 

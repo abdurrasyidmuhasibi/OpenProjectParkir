@@ -3,7 +3,12 @@ package com.example.parkir.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
+import android.util.Patterns;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -22,19 +27,22 @@ public class DaftarKangParkir extends AppCompatActivity implements View.OnClickL
 
     int roleid = 1;
     EditText etNama, etEmail, etAlamat, etUsername, etPassword;
+    CheckBox showPass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daftar_kang_parkir);
 
-        etNama = (EditText) findViewById(R.id.et_namaLokasi);
-        etEmail = (EditText) findViewById(R.id.et_alamatLokasi);
-        etAlamat = (EditText) findViewById(R.id.et_kecamatan);
-        etUsername = (EditText) findViewById(R.id.et_kota);
+        etNama = (EditText) findViewById(R.id.et_nama);
+        etEmail = (EditText) findViewById(R.id.et_email);
+        etAlamat = (EditText) findViewById(R.id.et_alamat);
+        etUsername = (EditText) findViewById(R.id.et_username);
         etPassword = (EditText) findViewById(R.id.et_password);
+        showPass = (CheckBox) findViewById(R.id.showPass);
 
         findViewById(R.id.btn_daftar).setOnClickListener(this);
+        showPass.setOnClickListener(this);
     }
 
     private void daftarUser() {
@@ -82,9 +90,29 @@ public class DaftarKangParkir extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_daftar:
-                daftarUser();
-                Intent i = new Intent(DaftarKangParkir.this, DaftarPenugasan.class);
-                startActivity(i);
+                if(TextUtils.isEmpty(etNama.getText().toString().trim())){
+                    etNama.setError("Nama diperlukan!");
+                } else if(TextUtils.isEmpty(etEmail.getText().toString().trim())){
+                    etEmail.setError("Email diperlukan!");
+                } else if(!isValidEmail(etEmail.getText().toString().trim())){
+                    etEmail.setError("Email tidak valid!");
+                } else if(TextUtils.isEmpty(etAlamat.getText().toString().trim())){
+                    etAlamat.setError("Alamat diperlukan!");
+                } else if(TextUtils.isEmpty(etUsername.getText().toString().trim())){
+                    etUsername.setError("Usernam diperlukan!");
+                } else if(TextUtils.isEmpty(etPassword.getText().toString().trim())){
+                    etPassword.setError("Password diperlukan!");
+                } else {
+                    daftarUser();
+                    Intent i = new Intent(DaftarKangParkir.this, DaftarPenugasan.class);
+                    startActivity(i);
+                } break;
+            case R.id.showPass:
+                if(showPass.isChecked()){
+                    etPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                } else {
+                    etPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                } break;
         }
     }
 
@@ -108,5 +136,9 @@ public class DaftarKangParkir extends AppCompatActivity implements View.OnClickL
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
+    }
+
+    public static boolean isValidEmail(CharSequence email){
+        return (Patterns.EMAIL_ADDRESS.matcher(email).matches());
     }
 }

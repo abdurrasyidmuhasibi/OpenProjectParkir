@@ -43,7 +43,7 @@ public class QrCode extends AppCompatActivity {
     }
 
     public void myHome(View view) {
-        Intent i = new Intent(QrCode.this, HomeUser.class);
+        Intent i = new Intent(QrCode.this, HomeKangParkir.class);
         startActivity(i);
     }
 
@@ -55,7 +55,7 @@ public class QrCode extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent intent = new Intent(getApplicationContext(), HomeUser.class);
+        Intent intent = new Intent(getApplicationContext(), HomeKangParkir.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
