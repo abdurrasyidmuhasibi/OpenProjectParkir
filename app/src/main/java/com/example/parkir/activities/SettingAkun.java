@@ -2,6 +2,9 @@ package com.example.parkir.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
@@ -14,6 +17,14 @@ public class SettingAkun extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting_logout);
+
+        PreferenceHelper prefShared = new PreferenceHelper(this);
+        String roleid = prefShared.getStr("roleid");
+        if (roleid.equals("1")) {
+            loadFragment(new SettingKangparkir());
+        } else if (roleid.equals("2")) {
+            loadFragment(new SettingUser());
+        }
     }
 
     public void myHome(View view) {
@@ -51,5 +62,13 @@ public class SettingAkun extends AppCompatActivity {
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
         }
+    }
+
+    private void loadFragment (Fragment fragment){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        fragmentTransaction.replace(R.id.frameLayout, fragment);
+        fragmentTransaction.commit();
     }
 }

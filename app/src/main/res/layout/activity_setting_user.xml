@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activities.SettingAkun">
+    android:layout_height="match_parent">
+
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -21,61 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="48dp"
-        android:background="@drawable/bg_red"
-        android:onClick="clickLogout"
-        android:text="Logout"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="36dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
-        android:background="@drawable/bg_header"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <ImageView
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="100dp"
-            android:onClick="myHome"
-            android:src="@drawable/home_button" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/qr_scanner_button" />
-
-        <ImageView
-            android:layout_width="31dp"
-            android:layout_height="31dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="100dp"
-            android:src="@drawable/account_buttonn" />
-    </RelativeLayout>
-
-    <Button
-        android:id="@+id/btn_edt_profil"
+        android:id="@+id/btn_edt_profilUser"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -86,9 +31,8 @@
         android:background="@drawable/bg_header"
         android:text="Edit Profil"
         android:textAllCaps="false"
-        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
 </android.support.constraint.ConstraintLayout>

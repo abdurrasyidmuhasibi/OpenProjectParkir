@@ -10,83 +10,32 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Firebase" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbc5211a-4c11-4a3c-ba66-ded75a40fa7b" name="Default Changelist" comment="Update tombol back">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_16_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_16_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_stats_16_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_16_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_common_16_0_3_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_17_0_4_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_interop_16_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_measurement_connector_17_0_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_messaging_17_3_4_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/SettingKangparkir.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/SettingUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_setting_kangparkir.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_setting_user.xml" afterDir="false" />
+    <list default="true" id="bbc5211a-4c11-4a3c-ba66-ded75a40fa7b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/EditPenugasan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/EditProfil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_penugasan.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_profil.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_asynclayoutinflater_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_asynclayoutinflater_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_coordinatorlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_coordinatorlayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cursoradapter_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cursoradapter_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customview_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customview_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_documentfile_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_documentfile_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_drawerlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_drawerlayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_interpolator_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_interpolator_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_loader_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_loader_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_localbroadcastmanager_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_localbroadcastmanager_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_print_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_print_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_slidingpanelayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_slidingpanelayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_swiperefreshlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_swiperefreshlayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_versionedparcelable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_versionedparcelable_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_journeyapps_zxing_android_embedded_3_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_journeyapps_zxing_android_embedded_3_2_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/DaftarKangParkir.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/DaftarKangParkir.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/DaftarPenugasan.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/DaftarPenugasan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/DaftarUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/DaftarUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/HomeKangParkir.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/HomeKangParkir.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/HomeUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/HomeUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/QrCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/QrCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/SettingAkun.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/SettingAkun.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_daftar_kang_parkir.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_daftar_kang_parkir.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/SettingKangparkir.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/SettingKangparkir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/SettingUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/SettingUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_daftar_penugasan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_daftar_penugasan.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_daftar_user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_daftar_user.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login_page.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login_page.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_pembayaran.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_pembayaran.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_setting_kangparkir.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_setting_kangparkir.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_setting_logout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_setting_logout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_setting_user.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_setting_user.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,24 +62,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_setting_user.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="1326">
-              <caret line="78" column="34" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="34" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/EditPenugasan.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
-          <provider selected="true" editor-type-id="android-designer2" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_setting_kangparkir.xml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="102" column="47" selection-start-line="102" selection-start-column="47" selection-end-line="102" selection-end-column="47" />
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/HomeUser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="42" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
-          <provider selected="true" editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/DaftarPenugasan.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2">
+              <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -175,7 +137,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_home_kang_parkir.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_pembayaran.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/QrCodeScanner.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_success.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_home_user.xml" />
@@ -186,23 +147,26 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/Success.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/QrCode.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login_page.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_daftar_kang_parkir.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_daftar_user.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/LoginPage.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/DaftarUser.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/DaftarKangParkir.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_daftar_penugasan.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/DaftarPenugasan.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/EditPenugasan.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_penugasan.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/SettingAkun.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_setting_logout.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/SettingUser.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/SettingKangparkir.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/HomeKangParkir.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/HomeUser.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_setting_user.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_setting_kangparkir.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/EditProfil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/SettingAkun.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_setting_logout.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_profil.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/SettingUser.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/SettingKangparkir.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_daftar_kang_parkir.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_daftar_penugasan.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_daftar_user.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_pembayaran.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_penugasan.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/EditPenugasan.java" />
       </list>
     </option>
   </component>
@@ -231,6 +195,34 @@
               <item name="Android KMIPN Parkir" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="Android KMIPN Parkir" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="parkir" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Android KMIPN Parkir" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="parkir" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="activities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Android KMIPN Parkir" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="parkir" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Android KMIPN Parkir" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="parkir" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="account" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -419,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565331334397</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Update validasi, show/hide password, setting">
+      <created>1565745230063</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1565745230063</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -432,7 +431,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Resources Explorer" order="0" sideWeight="0.50080514" side_tool="true" weight="0.20877458" />
       <window_info id="Captures" order="1" side_tool="true" weight="0.25" />
@@ -472,77 +472,10 @@
     <MESSAGE value="Cek Register" />
     <MESSAGE value="Update UI" />
     <MESSAGE value="Update tombol back" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update tombol back" />
+    <MESSAGE value="Update validasi, show/hide password, setting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update validasi, show/hide password, setting" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/model/daftar/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
-            <element signature="e#459#460#0" expanded="true" />
-            <element signature="e#491#492#0" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#555#556#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#639#640#0" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-            <element signature="e#698#699#0" expanded="true" />
-            <element signature="e#739#740#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/model/daftar/Datas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="107" column="1" selection-start-line="107" selection-start-column="1" selection-end-line="107" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#841#842#0" expanded="true" />
-            <element signature="e#873#874#0" expanded="true" />
-            <element signature="e#926#927#0" expanded="true" />
-            <element signature="e#968#969#0" expanded="true" />
-            <element signature="e#1007#1008#0" expanded="true" />
-            <element signature="e#1039#1040#0" expanded="true" />
-            <element signature="e#1092#1093#0" expanded="true" />
-            <element signature="e#1134#1135#0" expanded="true" />
-            <element signature="e#1164#1165#0" expanded="true" />
-            <element signature="e#1189#1190#0" expanded="true" />
-            <element signature="e#1226#1227#0" expanded="true" />
-            <element signature="e#1254#1255#0" expanded="true" />
-            <element signature="e#1287#1288#0" expanded="true" />
-            <element signature="e#1316#1317#0" expanded="true" />
-            <element signature="e#1360#1361#0" expanded="true" />
-            <element signature="e#1396#1397#0" expanded="true" />
-            <element signature="e#1431#1432#0" expanded="true" />
-            <element signature="e#1462#1463#0" expanded="true" />
-            <element signature="e#1510#1511#0" expanded="true" />
-            <element signature="e#1550#1551#0" expanded="true" />
-            <element signature="e#1585#1586#0" expanded="true" />
-            <element signature="e#1616#1617#0" expanded="true" />
-            <element signature="e#1664#1665#0" expanded="true" />
-            <element signature="e#1704#1705#0" expanded="true" />
-            <element signature="e#1739#1740#0" expanded="true" />
-            <element signature="e#1770#1771#0" expanded="true" />
-            <element signature="e#1818#1819#0" expanded="true" />
-            <element signature="e#1858#1859#0" expanded="true" />
-            <element signature="e#1890#1891#0" expanded="true" />
-            <element signature="e#1918#1919#0" expanded="true" />
-            <element signature="e#1960#1961#0" expanded="true" />
-            <element signature="e#1994#1995#0" expanded="true" />
-            <element signature="e#2028#2029#0" expanded="true" />
-            <element signature="e#2058#2059#0" expanded="true" />
-            <element signature="e#2104#2105#0" expanded="true" />
-            <element signature="e#2142#2143#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/model/daftar/CreatedAt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -629,13 +562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/model/account/AccountModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/model/account/Assignment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -672,14 +598,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_qr_code_scanner.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/QrCodeScanner.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home_user.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="124" column="30" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="30" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_success.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -695,14 +613,6 @@
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -728,14 +638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home_kang_parkir.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="128" column="49" lean-forward="true" selection-start-line="128" selection-start-column="49" selection-end-line="128" selection-end-column="49" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/QrCode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
@@ -743,10 +645,153 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/DaftarUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="96" column="24" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_setting_kangparkir.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="49" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_setting_logout.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="79" column="34" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_setting_user.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/HomeKangParkir.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="61" column="62" selection-start-line="61" selection-start-column="62" selection-end-line="61" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/SettingUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#717#943#0" expanded="true" />
+            <element signature="e#942#943#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/SettingKangparkir.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#719#942#0" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
+            <element signature="e#1063#1287#0" expanded="true" />
+            <element signature="e#1286#1287#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/SettingAkun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="23" column="46" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/EditProfil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_edit_profil.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home_kang_parkir.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="2176">
+          <caret line="128" column="49" lean-forward="true" selection-start-line="128" selection-start-column="49" selection-end-line="128" selection-end-column="49" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home_user.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="2108">
+          <caret line="124" column="30" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="30" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_daftar_kang_parkir.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1819">
+          <caret line="107" column="33" selection-start-line="107" selection-start-column="33" selection-end-line="107" selection-end-column="33" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_daftar_penugasan.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="2159">
+          <caret line="129" column="71" selection-start-line="129" selection-start-column="71" selection-end-line="129" selection-end-column="71" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_daftar_user.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1819">
+          <caret line="107" column="33" selection-start-line="107" selection-start-column="33" selection-end-line="107" selection-end-column="33" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detail_pembayaran.xml">
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="2584">
-          <caret line="152" column="33" lean-forward="true" selection-start-line="152" selection-start-column="33" selection-end-line="152" selection-end-column="33" />
+        <state relative-caret-position="2567">
+          <caret line="153" column="8" lean-forward="true" selection-start-line="153" selection-start-column="8" selection-end-line="153" selection-end-column="8" />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2" />
@@ -759,139 +804,54 @@
       </provider>
       <provider selected="true" editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_daftar_user.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="107" column="33" selection-start-line="107" selection-start-column="33" selection-end-line="107" selection-end-column="33" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/DaftarKangParkir.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
+        <state relative-caret-position="1120">
           <caret line="114" column="24" selection-start-line="114" selection-start-column="24" selection-end-line="114" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_daftar_kang_parkir.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="107" column="33" selection-start-line="107" selection-start-column="33" selection-end-line="107" selection-end-column="33" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_daftar_penugasan.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="129" column="71" selection-start-line="129" selection-start-column="71" selection-end-line="129" selection-end-column="71" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/DaftarUser.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_edit_penugasan.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="96" column="24" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
+        <state relative-caret-position="361">
+          <caret line="147" column="52" selection-start-line="147" selection-start-column="52" selection-end-line="147" selection-end-column="52" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/LoginPage.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/model/account/AccountModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="100" column="11" lean-forward="true" selection-start-line="100" selection-start-column="11" selection-end-line="100" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/DaftarPenugasan.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_edit_penugasan.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/EditPenugasan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/SettingUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/SettingKangparkir.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="19" column="68" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/SettingAkun.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="53" column="5" selection-start-line="18" selection-start-column="4" selection-end-line="53" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_setting_logout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="22" column="11" lean-forward="true" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/HomeKangParkir.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="61" column="68" selection-start-line="61" selection-start-column="68" selection-end-line="61" selection-end-column="68" />
+        <state relative-caret-position="-2">
+          <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/HomeUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="71" column="56" selection-start-line="71" selection-start-column="56" selection-end-line="71" selection-end-column="56" />
+        <state relative-caret-position="66">
+          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="42" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_setting_user.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="78" column="34" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="34" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/EditPenugasan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_setting_kangparkir.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="102" column="47" selection-start-line="102" selection-start-column="47" selection-end-line="102" selection-end-column="47" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
   </component>
 </project>

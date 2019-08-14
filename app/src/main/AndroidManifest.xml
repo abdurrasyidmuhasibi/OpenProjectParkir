@@ -15,8 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.SettingKangparkir"></activity>
-        <activity android:name=".activities.SettingUser" />
+        <activity android:name=".activities.EditProfil"></activity>
+        <activity android:name=".activities.EditPenugasan" />
 
         <service
             android:name=".firebase.getNotification"

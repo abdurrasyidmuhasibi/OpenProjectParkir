@@ -141,15 +141,15 @@
 
     <Button
         android:id="@+id/btnConfirm"
-        android:onClick="clickConfirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/bg_header_log"
+        android:onClick="clickConfirm"
         android:text="Konfirmasi"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
