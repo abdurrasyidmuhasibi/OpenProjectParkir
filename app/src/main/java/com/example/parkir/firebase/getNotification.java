@@ -26,8 +26,8 @@ public class getNotification extends FirebaseMessagingService {
 
     private void sendNotif(RemoteMessage remoteMessage){
         Map<String,String> data=remoteMessage.getData();
-        String title = data.get("judul");
-        String content=data.get("message");
+        String title = remoteMessage.getNotification().getTitle();
+        String content = remoteMessage.getNotification().getBody();
         NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         String NOTIFICATION_CHANNEL_ID = "id1";
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
