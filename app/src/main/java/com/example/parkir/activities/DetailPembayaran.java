@@ -95,6 +95,7 @@ public class DetailPembayaran extends AppCompatActivity {
         txtAccountId = (TextView) findViewById(R.id.txtAccountId);
         txtAccountId.setVisibility(View.INVISIBLE);
         txtParkingTypeId.setVisibility(View.INVISIBLE);
+        txtFcmToken.setVisibility(View.INVISIBLE);
 
         Intent intent = getIntent();
         String fcmToken = intent.getStringExtra("fcmToken");

@@ -61,7 +61,7 @@ public interface api {
     );
 
     @FormUrlEncoded
-    @POST("payments/")
+    @POST("notifications/")
     Call<NotificationModel> notifications(
             @Field("token") String fcmToken,
             @Field("nominal") String nominal,
