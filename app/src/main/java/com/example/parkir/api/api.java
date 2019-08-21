@@ -4,6 +4,7 @@ import com.example.parkir.model.PaymentParking.PaymentParkingModel;
 import com.example.parkir.model.account.AccountModel;
 import com.example.parkir.model.account.Assignment;
 import com.example.parkir.model.daftar.RegisterModel;
+import com.example.parkir.model.history.HistoryModel;
 import com.example.parkir.model.login.LoginModel;
 import com.example.parkir.model.notification.NotificationModel;
 import com.example.parkir.model.payment.PaymentModel;
@@ -70,6 +71,10 @@ public interface api {
     );
 
     @FormUrlEncoded
-    @GET("payments/")
-    Call<PaymentModel> payments(@Header("Authorization") String token);
+    @GET("payments/income/")
+    Call<HistoryModel> payments_income(@Header("Authorization") String token);
+
+    @FormUrlEncoded
+    @GET("payments/expend/")
+    Call<PaymentModel> payments_expend(@Header("Authorization") String token);
 }
