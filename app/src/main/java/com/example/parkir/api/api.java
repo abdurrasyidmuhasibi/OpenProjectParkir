@@ -6,6 +6,7 @@ import com.example.parkir.model.account.Assignment;
 import com.example.parkir.model.daftar.RegisterModel;
 import com.example.parkir.model.login.LoginModel;
 import com.example.parkir.model.notification.NotificationModel;
+import com.example.parkir.model.payment.PaymentModel;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -67,4 +68,8 @@ public interface api {
             @Field("nominal") String nominal,
             @Field("vehicle_registration") String vehicle_registration
     );
+
+    @FormUrlEncoded
+    @GET("payments/")
+    Call<PaymentModel> payments(@Header("Authorization") String token);
 }

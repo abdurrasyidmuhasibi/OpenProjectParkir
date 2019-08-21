@@ -12,7 +12,7 @@ import com.example.parkir.R;
 
 public class SettingUser extends Fragment {
     View view;
-    Button editProfil;
+    Button editProfil, btnHistory;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -22,6 +22,14 @@ public class SettingUser extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getContext(),EditProfil.class);
+                startActivity(i);
+            }
+        });
+        btnHistory = (Button) view.findViewById(R.id.btn_history);
+        btnHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), History.class);
                 startActivity(i);
             }
         });

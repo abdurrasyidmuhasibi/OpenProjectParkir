@@ -10,9 +10,9 @@ import android.widget.Button;
 
 import com.example.parkir.R;
 
-public class SettingKangparkir extends Fragment{
+public class SettingKangparkir extends Fragment {
     View view;
-    Button editProfil, editPenugasan;
+    Button editProfil, editPenugasan, btnHistory;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class SettingKangparkir extends Fragment{
         editProfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getContext(),EditProfil.class);
+                Intent i = new Intent(getContext(), EditProfil.class);
                 startActivity(i);
             }
         });
@@ -30,6 +30,14 @@ public class SettingKangparkir extends Fragment{
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getContext(), EditPenugasan.class);
+                startActivity(i);
+            }
+        });
+        btnHistory = (Button) view.findViewById(R.id.btn_history);
+        btnHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), History.class);
                 startActivity(i);
             }
         });
