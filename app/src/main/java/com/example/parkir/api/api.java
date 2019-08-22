@@ -4,10 +4,9 @@ import com.example.parkir.model.PaymentParking.PaymentParkingModel;
 import com.example.parkir.model.account.AccountModel;
 import com.example.parkir.model.account.Assignment;
 import com.example.parkir.model.daftar.RegisterModel;
-import com.example.parkir.model.history.HistoryModel;
+import com.example.parkir.model.history.HistoryList;
 import com.example.parkir.model.login.LoginModel;
 import com.example.parkir.model.notification.NotificationModel;
-import com.example.parkir.model.payment.PaymentModel;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -29,12 +28,12 @@ public interface api {
     @FormUrlEncoded
     @POST("registers/")
     Call<RegisterModel> register(
-        @Field("roleid") int roleid,
-        @Field("username") String username,
-        @Field("password") String password,
-        @Field("full_name") String nama,
-        @Field("email") String email,
-        @Field("address") String alamat
+            @Field("roleid") int roleid,
+            @Field("username") String username,
+            @Field("password") String password,
+            @Field("full_name") String nama,
+            @Field("email") String email,
+            @Field("address") String alamat
     );
 
     @FormUrlEncoded
@@ -72,9 +71,9 @@ public interface api {
 
     @FormUrlEncoded
     @GET("payments/income/")
-    Call<HistoryModel> payments_income(@Header("Authorization") String token);
+    Call<HistoryList> payments_income(@Header("Authorization") String token);
 
     @FormUrlEncoded
     @GET("payments/expend/")
-    Call<PaymentModel> payments_expend(@Header("Authorization") String token);
+    Call<HistoryList> payments_expend(@Header("Authorization") String token);
 }

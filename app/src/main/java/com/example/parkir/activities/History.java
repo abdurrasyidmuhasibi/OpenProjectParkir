@@ -4,14 +4,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.example.parkir.R;
 import com.example.parkir.RetrofitAdapter;
 import com.example.parkir.RetrofitClient;
+import com.example.parkir.RetrofitInstance;
 import com.example.parkir.api.api;
 import com.example.parkir.helpers.PreferenceHelper;
 import com.example.parkir.model.account.AccountModel;
+import com.example.parkir.model.history.HistoryList;
 import com.example.parkir.model.history.HistoryModel;
 import com.example.parkir.model.payment.PaymentModel;
 
@@ -27,7 +30,8 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 
 public class History extends AppCompatActivity {
-    private RetrofitAdapter retrofitAdapter;
+
+    private RetrofitAdapter adapter;
     private RecyclerView recyclerView;
 
     @Override
@@ -35,61 +39,37 @@ public class History extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerView = findViewById(R.id.recycler);
+        api service = RetrofitInstance.getRetrofitInstance().create(api.class);
 
         PreferenceHelper prefShared = new PreferenceHelper(this);
         String jwtToken = prefShared.getStr("jwtToken");
 
-        api service = RetrofitClient.getRetrofitInstance().create(api.class);
-        Call<HistoryModel> call = service.payments_income(jwtToken);
-        call.enqueue(new Callback<HistoryModel>() {
-            @Override
-            public void onResponse(Call<HistoryModel> call, Response<HistoryModel> response) {
+        Call<HistoryList> call = service.payments_income(jwtToken);
 
+        Log.wtf("URL Called", call.request().url() + "");
+
+        call.enqueue(new Callback<HistoryList>() {
+            @Override
+            public void onResponse(Call<HistoryList> call, Response<HistoryList> response) {
+                generateHistoryList(response.body().getHistoryArrayList());
             }
 
             @Override
-            public void onFailure(Call<HistoryModel> call, Throwable t) {
-
+            public void onFailure(Call<HistoryList> call, Throwable t) {
+                Toast.makeText(History.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
-    private void writeRecycler(String response){
+    private void generateHistoryList(ArrayList<HistoryModel> historyDataList) {
+        recyclerView = (RecyclerView) findViewById(R.id.rv_history_list);
 
-        try {
-            //getting the whole json object from the response
-            JSONObject obj = new JSONObject(response);
-            if(obj.optString("status").equals("true")){
+        adapter = new RetrofitAdapter(historyDataList);
 
-                ArrayList<HistoryModel> modelRecyclerArrayList = new ArrayList<>();
-                JSONArray dataArray  = obj.getJSONArray("data");
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(History.this);
 
-                for (int i = 0; i < dataArray.length(); i++) {
+        recyclerView.setLayoutManager(layoutManager);
 
-                    HistoryModel modelRecycler = new HistoryModel();
-                    JSONObject dataobj = dataArray.getJSONObject(i);
-
-                    modelRecycler.setImgURL(dataobj.getString("imgURL"));
-                    modelRecycler.setName(dataobj.getString("name"));
-                    modelRecycler.setCountry(dataobj.getString("country"));
-                    modelRecycler.setCity(dataobj.getString("city"));
-
-                    modelRecyclerArrayList.add(modelRecycler);
-
-                }
-
-                retrofitAdapter = new RetrofitAdapter(this,modelRecyclerArrayList);
-                recyclerView.setAdapter(retrofitAdapter);
-                recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
-
-            }else {
-                Toast.makeText(History.this, obj.optString("message")+"", Toast.LENGTH_SHORT).show();
-            }
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
+        recyclerView.setAdapter(adapter);
     }
 }
