@@ -37,13 +37,12 @@ public class History extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        api service = RetrofitInstance.getRetrofitInstance().create(api.class);
+        setContentView(R.layout.activity_history);
 
         PreferenceHelper prefShared = new PreferenceHelper(this);
         String jwtToken = prefShared.getStr("jwtToken");
 
+        api service = RetrofitInstance.getRetrofitInstance().create(api.class);
         Call<HistoryList> call = service.payments_income(jwtToken);
 
         Log.wtf("URL Called", call.request().url() + "");
