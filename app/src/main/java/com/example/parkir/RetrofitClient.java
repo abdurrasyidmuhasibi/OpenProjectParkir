@@ -1,6 +1,5 @@
 package com.example.parkir;
 
-import com.example.parkir.api.api;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
