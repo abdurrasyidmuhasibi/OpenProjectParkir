@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.parkir">
 
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,12 +15,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.History"></activity>
+        <activity android:name=".activities.TopupConfirm"></activity>
+        <activity android:name=".activities.Withdraw" />
+        <activity android:name=".activities.Topup">
+
+        </activity>
+        <activity android:name=".activities.History" />
         <activity android:name=".activities.EditProfil" />
         <activity android:name=".activities.EditPenugasan" />
-
         <activity android:name=".activities.Firebase" />
-
         <activity android:name=".activities.Success" />
         <activity android:name=".activities.DaftarPenugasan" />
         <activity android:name=".activities.DaftarKangParkir" />
@@ -56,10 +65,5 @@
             </intent-filter>
         </service>
     </application>
-
-    <uses-feature android:name="android.hardware.camera.autofocus" />
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

@@ -7,6 +7,10 @@ import com.example.parkir.model.daftar.RegisterModel;
 import com.example.parkir.model.history.HistoryModel;
 import com.example.parkir.model.login.LoginModel;
 import com.example.parkir.model.notification.NotificationModel;
+import com.example.parkir.model.payment.PaymentModel;
+import com.example.parkir.model.paymenttopup.PaymentTopupModel;
+import com.example.parkir.model.paymenttype.PaymentGatewayModel;
+import com.example.parkir.model.paymentwithdraw.PaymentWithdrawModel;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -74,4 +78,22 @@ public interface api {
 
     @GET("payments/expend/")
     Call<HistoryModel> payments_expend(@Header("Authorization") String token);
+
+    @GET("payments/gateway/")
+    Call<PaymentGatewayModel> payments_gateway();
+
+    @FormUrlEncoded
+    @POST("payments/topup/")
+    Call<PaymentTopupModel> payment_topup(
+            @Header("Authorization") String token,
+            @Field("payment_gateway") String payment_gateway,
+            @Field("nominal") Integer nominal
+    );
+
+    @FormUrlEncoded
+    @POST("payments/withdraw/")
+    Call<PaymentWithdrawModel> payment_withdraw(
+            @Header("Authorization") String token,
+            @Field("nominal") Integer nominal
+    );
 }

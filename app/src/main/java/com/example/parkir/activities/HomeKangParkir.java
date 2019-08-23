@@ -63,6 +63,16 @@ public class HomeKangParkir extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void topup(View view) {
+        Intent i = new Intent(HomeKangParkir.this, Topup.class);
+        startActivity(i);
+    }
+
+    public void withdraw(View view) {
+        Intent i = new Intent(HomeKangParkir.this, Withdraw.class);
+        startActivity(i);
+    }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();

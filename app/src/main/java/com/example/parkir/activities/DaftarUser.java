@@ -32,10 +32,10 @@ public class DaftarUser extends AppCompatActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daftar_user);
 
-        etNama = (EditText) findViewById(R.id.et_namaLokasi);
-        etEmail = (EditText) findViewById(R.id.et_alamatLokasi);
-        etAlamat = (EditText) findViewById(R.id.et_kecamatan);
-        etUsername = (EditText) findViewById(R.id.et_kota);
+        etNama = (EditText) findViewById(R.id.et_nama);
+        etEmail = (EditText) findViewById(R.id.et_email);
+        etAlamat = (EditText) findViewById(R.id.et_alamat);
+        etUsername = (EditText) findViewById(R.id.et_username);
         etPassword = (EditText) findViewById(R.id.et_password);
         showPass = (CheckBox) findViewById(R.id.showPass);
 
