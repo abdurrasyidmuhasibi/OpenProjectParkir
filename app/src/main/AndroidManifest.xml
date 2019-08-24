@@ -15,12 +15,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.TopupConfirm"/>
+        <activity android:name=".activities.QrCodeScanner"></activity>
+        <activity android:name=".activities.BarChartKangParkir"></activity>
+        <activity android:name=".activities.TopupConfirm" />
         <activity android:name=".activities.Withdraw" />
-        <activity android:name=".activities.Topup"/>
+        <activity android:name=".activities.Topup" />
         <activity android:name=".activities.History" />
         <activity android:name=".activities.EditProfil" />
-        <activity android:name=".activities.BarChartKangParkir"/>
         <activity android:name=".activities.EditPenugasan" />
         <activity android:name=".activities.Firebase" />
         <activity android:name=".activities.Success" />
