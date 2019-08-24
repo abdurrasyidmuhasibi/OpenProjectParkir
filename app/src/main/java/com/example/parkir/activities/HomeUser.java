@@ -64,8 +64,8 @@ public class HomeUser extends AppCompatActivity {
     }
 
     public void myScan(View view) {
-        intentIntegrator = new IntentIntegrator(this);
-        intentIntegrator.initiateScan();
+        Intent i = new Intent(HomeUser.this, QrCodeScanner.class);
+        startActivity(i);
     }
 
     public void myAkun(View view) {
@@ -73,64 +73,64 @@ public class HomeUser extends AppCompatActivity {
         startActivity(i);
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        final IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-        if (result != null) {
-            if (result.getContents() == null) {
-                Toast.makeText(this, "Hasil tidak ditemukan", Toast.LENGTH_SHORT).show();
-            } else {
-                /* GET JWT TOKEN */
-                PreferenceHelper prefShared = new PreferenceHelper(this);
-                String jwtToken = prefShared.getStr("jwtToken");
-                /* GET JWT TOKEN */
-
-                /* SPLIT */
-                final String s = result.getContents();
-                String[] arrayString = s.split(";");
-
-                final String fcmToken = arrayString[0];
-                Integer accountid = parseInt(arrayString[1]);
-
-                /* KANG PARKIR ID */
-//                Integer accountid = parseInt(result.getContents());
-                Toast.makeText(HomeUser.this, "" +accountid, Toast.LENGTH_SHORT).show();
-
-
-                /*Create handle for the RetrofitInstance interface*/
-                api service = RetrofitClient.getRetrofitInstance().create(api.class);
-                Call<AccountModel> call = service.account_parkir(jwtToken, accountid);
-                call.enqueue(new Callback<AccountModel>() {
-                    @Override
-                    public void onResponse(Call<AccountModel> call, Response<AccountModel> response) {
-                        if (response.body().getData().getDatas().getAssignment().equals(null)) {
-                            Toast.makeText(HomeUser.this, "Akun anda bukan akun tukang parkir.", Toast.LENGTH_SHORT).show();
-                        } else {
-                            Toast.makeText(HomeUser.this, "Sukses, tukang parkir anda adalah " + response.body().getData().getDatas().getFullName(), Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(HomeUser.this, DetailPembayaran.class);
-                            intent.putExtra("fcmToken", fcmToken);
-                            intent.putExtra("accountid", response.body().getData().getDatas().getId().toString());
-                            intent.putExtra("name", response.body().getData().getDatas().getFullName());
-                            intent.putExtra("location_name", response.body().getData().getDatas().getAssignment().getLocationName());
-                            intent.putExtra("location_address", response.body().getData().getDatas().getAssignment().getLocationAddress() + "," + response.body().getData().getDatas().getAssignment().getDistrict() + "," + response.body().getData().getDatas().getAssignment().getCity() + ",");
-                            intent.putExtra("nominal", "Rp. 2000");
-                            startActivity(intent);
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<AccountModel> call, Throwable t) {
-                        Toast.makeText(HomeUser.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
-                    }
-
-
-                });
-                /* END LOAD CONTENT HOME */
-            }
-        } else {
-            super.onActivityResult(requestCode, resultCode, data);
-        }
-    }
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        final IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+//        if (result != null) {
+//            if (result.getContents() == null) {
+//                Toast.makeText(this, "Hasil tidak ditemukan", Toast.LENGTH_SHORT).show();
+//            } else {
+//                /* GET JWT TOKEN */
+//                PreferenceHelper prefShared = new PreferenceHelper(this);
+//                String jwtToken = prefShared.getStr("jwtToken");
+//                /* GET JWT TOKEN */
+//
+//                /* SPLIT */
+//                final String s = result.getContents();
+//                String[] arrayString = s.split(";");
+//
+//                final String fcmToken = arrayString[0];
+//                Integer accountid = parseInt(arrayString[1]);
+//
+//                /* KANG PARKIR ID */
+////                Integer accountid = parseInt(result.getContents());
+//                Toast.makeText(HomeUser.this, "" +accountid, Toast.LENGTH_SHORT).show();
+//
+//
+//                /*Create handle for the RetrofitInstance interface*/
+//                api service = RetrofitClient.getRetrofitInstance().create(api.class);
+//                Call<AccountModel> call = service.account_parkir(jwtToken, accountid);
+//                call.enqueue(new Callback<AccountModel>() {
+//                    @Override
+//                    public void onResponse(Call<AccountModel> call, Response<AccountModel> response) {
+//                        if (response.body().getData().getDatas().getAssignment().equals(null)) {
+//                            Toast.makeText(HomeUser.this, "Akun anda bukan akun tukang parkir.", Toast.LENGTH_SHORT).show();
+//                        } else {
+//                            Toast.makeText(HomeUser.this, "Sukses, tukang parkir anda adalah " + response.body().getData().getDatas().getFullName(), Toast.LENGTH_SHORT).show();
+//                            Intent intent = new Intent(HomeUser.this, DetailPembayaran.class);
+//                            intent.putExtra("fcmToken", fcmToken);
+//                            intent.putExtra("accountid", response.body().getData().getDatas().getId().toString());
+//                            intent.putExtra("name", response.body().getData().getDatas().getFullName());
+//                            intent.putExtra("location_name", response.body().getData().getDatas().getAssignment().getLocationName());
+//                            intent.putExtra("location_address", response.body().getData().getDatas().getAssignment().getLocationAddress() + "," + response.body().getData().getDatas().getAssignment().getDistrict() + "," + response.body().getData().getDatas().getAssignment().getCity() + ",");
+//                            intent.putExtra("nominal", "Rp. 2000");
+//                            startActivity(intent);
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<AccountModel> call, Throwable t) {
+//                        Toast.makeText(HomeUser.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
+//                    }
+//
+//
+//                });
+//                /* END LOAD CONTENT HOME */
+//            }
+//        } else {
+//            super.onActivityResult(requestCode, resultCode, data);
+//        }
+//    }
 
     @Override
     public void onBackPressed() {
