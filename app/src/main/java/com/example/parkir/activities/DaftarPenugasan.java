@@ -42,13 +42,13 @@ public class DaftarPenugasan extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_daftar:
-                if(TextUtils.isEmpty(etNamaLokasi.getText().toString().trim())){
+                if (TextUtils.isEmpty(etNamaLokasi.getText().toString().trim())) {
                     etNamaLokasi.setError("Nama Lokasi diperlukan!");
-                } else if(TextUtils.isEmpty(etAlamatLokasi.getText().toString().trim())){
+                } else if (TextUtils.isEmpty(etAlamatLokasi.getText().toString().trim())) {
                     etAlamatLokasi.setError("Alamat Lokasi diperlukan!");
-                } else if(TextUtils.isEmpty(etKecamatan.getText().toString().trim())){
+                } else if (TextUtils.isEmpty(etKecamatan.getText().toString().trim())) {
                     etKecamatan.setError("Kecamatan diperlukan!");
-                } else if(TextUtils.isEmpty(etKota.getText().toString().trim())){
+                } else if (TextUtils.isEmpty(etKota.getText().toString().trim())) {
                     etKota.setError("Kota diperlukan!");
                 } else if (cbSyarat.isChecked()) {
                     daftarPenugasan();
@@ -56,7 +56,8 @@ public class DaftarPenugasan extends AppCompatActivity implements View.OnClickLi
                     startActivity(i);
                 } else {
                     Toast.makeText(DaftarPenugasan.this, "Centang Syarat & Ketentuan untuk melanjutkan Pendaftaran", Toast.LENGTH_SHORT).show();
-                } break;
+                }
+                break;
         }
     }
 

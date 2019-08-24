@@ -81,7 +81,7 @@ public class DaftarKangParkir extends AppCompatActivity implements View.OnClickL
 
             @Override
             public void onFailure(Call<RegisterModel> call, Throwable t) {
-                Toast.makeText(DaftarKangParkir.this, "Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DaftarKangParkir.this, "Error, harap periksa koneksi Internet Anda!", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -90,29 +90,31 @@ public class DaftarKangParkir extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_daftar:
-                if(TextUtils.isEmpty(etNama.getText().toString().trim())){
+                if (TextUtils.isEmpty(etNama.getText().toString().trim())) {
                     etNama.setError("Nama diperlukan!");
-                } else if(TextUtils.isEmpty(etEmail.getText().toString().trim())){
+                } else if (TextUtils.isEmpty(etEmail.getText().toString().trim())) {
                     etEmail.setError("Email diperlukan!");
-                } else if(!isValidEmail(etEmail.getText().toString().trim())){
+                } else if (!isValidEmail(etEmail.getText().toString().trim())) {
                     etEmail.setError("Email tidak valid!");
-                } else if(TextUtils.isEmpty(etAlamat.getText().toString().trim())){
+                } else if (TextUtils.isEmpty(etAlamat.getText().toString().trim())) {
                     etAlamat.setError("Alamat diperlukan!");
-                } else if(TextUtils.isEmpty(etUsername.getText().toString().trim())){
+                } else if (TextUtils.isEmpty(etUsername.getText().toString().trim())) {
                     etUsername.setError("Usernam diperlukan!");
-                } else if(TextUtils.isEmpty(etPassword.getText().toString().trim())){
+                } else if (TextUtils.isEmpty(etPassword.getText().toString().trim())) {
                     etPassword.setError("Password diperlukan!");
                 } else {
                     daftarUser();
                     Intent i = new Intent(DaftarKangParkir.this, DaftarPenugasan.class);
                     startActivity(i);
-                } break;
+                }
+                break;
             case R.id.showPass:
-                if(showPass.isChecked()){
+                if (showPass.isChecked()) {
                     etPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
                 } else {
                     etPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
-                } break;
+                }
+                break;
         }
     }
 
@@ -138,7 +140,7 @@ public class DaftarKangParkir extends AppCompatActivity implements View.OnClickL
         startActivity(intent);
     }
 
-    public static boolean isValidEmail(CharSequence email){
+    public static boolean isValidEmail(CharSequence email) {
         return (Patterns.EMAIL_ADDRESS.matcher(email).matches());
     }
 }

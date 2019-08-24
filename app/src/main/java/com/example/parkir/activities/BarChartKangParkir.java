@@ -1,15 +1,12 @@
 package com.example.parkir.activities;
 
 import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import com.example.parkir.R;
 import com.example.parkir.RetrofitClient;
-import com.example.parkir.adapters.HistoryAdapter;
 import com.example.parkir.api.api;
 import com.example.parkir.helpers.PreferenceHelper;
 import com.example.parkir.model.chartmonthly.ChartMonthlyModel;
@@ -21,7 +18,6 @@ import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.formatter.IAxisValueFormatter;
-import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +29,7 @@ import retrofit2.Response;
 public class BarChartKangParkir extends AppCompatActivity {
 
     private BarChart mBarChart;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +56,7 @@ public class BarChartKangParkir extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ChartMonthlyModel> call, Throwable t) {
-                Toast.makeText(BarChartKangParkir.this, "error"+ t, Toast.LENGTH_SHORT).show();
+                Toast.makeText(BarChartKangParkir.this, "error" + t, Toast.LENGTH_SHORT).show();
             }
         });
     }

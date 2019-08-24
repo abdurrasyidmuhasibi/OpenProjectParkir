@@ -59,7 +59,6 @@ public class GatewayAdapter extends RecyclerView.Adapter<GatewayAdapter.CustomVi
 
             imgLogo = mView.findViewById(R.id.imgLogo);
             btnGateway = mView.findViewById(R.id.btnGateway);
-
         }
     }
 

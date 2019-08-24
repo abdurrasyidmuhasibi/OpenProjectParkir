@@ -8,7 +8,6 @@ import com.example.parkir.model.daftar.RegisterModel;
 import com.example.parkir.model.history.HistoryModel;
 import com.example.parkir.model.login.LoginModel;
 import com.example.parkir.model.notification.NotificationModel;
-import com.example.parkir.model.payment.PaymentModel;
 import com.example.parkir.model.paymenttopup.PaymentTopupModel;
 import com.example.parkir.model.paymenttype.PaymentGatewayModel;
 import com.example.parkir.model.paymentwithdraw.PaymentWithdrawModel;

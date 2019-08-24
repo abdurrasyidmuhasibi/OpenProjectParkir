@@ -15,7 +15,9 @@ import android.widget.Toast;
 import com.example.parkir.R;
 import com.example.parkir.RetrofitClient;
 import com.example.parkir.api.api;
+import com.example.parkir.helpers.PreferenceHelper;
 import com.example.parkir.model.daftar.RegisterModel;
+import com.example.parkir.model.login.LoginModel;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -47,8 +49,8 @@ public class DaftarUser extends AppCompatActivity implements View.OnClickListene
         String nama = etNama.getText().toString().trim();
         String email = etEmail.getText().toString().trim();
         String alamat = etAlamat.getText().toString().trim();
-        String username = etUsername.getText().toString().trim();
-        String password = etPassword.getText().toString().trim();
+        final String username = etUsername.getText().toString().trim();
+        final String password = etPassword.getText().toString().trim();
 
         Call<RegisterModel> call = RetrofitClient
                 .getRetrofitInstance()
@@ -59,6 +61,22 @@ public class DaftarUser extends AppCompatActivity implements View.OnClickListene
             @Override
             public void onResponse(Call<RegisterModel> call, Response<RegisterModel> response) {
                 Toast.makeText(DaftarUser.this, "Success Daftar User", Toast.LENGTH_SHORT).show();
+                Call<LoginModel> login = RetrofitClient
+                        .getRetrofitInstance()
+                        .create(api.class)
+                        .logins(username, password);
+                login.enqueue(new Callback<LoginModel>() {
+                    @Override
+                    public void onResponse(Call<LoginModel> call, Response<LoginModel> response) {
+                        Toast.makeText(DaftarUser.this, "Berhasil Login", Toast.LENGTH_SHORT).show();
+                        processSaveToken(response.body().getData().getDatas().getJwtTokenData(), response.body().getData().getDatas().getAccountData().getAccountRole().getId().toString(), response.body().getData().getDatas().getAccountData().getId().toString());
+                    }
+
+                    @Override
+                    public void onFailure(Call<LoginModel> call, Throwable t) {
+                        Toast.makeText(DaftarUser.this, "Gagal Login", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
 
             @Override
@@ -72,29 +90,31 @@ public class DaftarUser extends AppCompatActivity implements View.OnClickListene
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_daftar:
-                if(TextUtils.isEmpty(etNama.getText().toString().trim())){
+                if (TextUtils.isEmpty(etNama.getText().toString().trim())) {
                     etNama.setError("Nama diperlukan!");
-                } else if(TextUtils.isEmpty(etEmail.getText().toString().trim())){
+                } else if (TextUtils.isEmpty(etEmail.getText().toString().trim())) {
                     etEmail.setError("Email diperlukan!");
-                } else if(!isValidEmail(etEmail.getText().toString().trim())){
+                } else if (!isValidEmail(etEmail.getText().toString().trim())) {
                     etEmail.setError("Email tidak valid!");
-                } else if(TextUtils.isEmpty(etAlamat.getText().toString().trim())){
+                } else if (TextUtils.isEmpty(etAlamat.getText().toString().trim())) {
                     etAlamat.setError("Alamat diperlukan!");
-                } else if(TextUtils.isEmpty(etUsername.getText().toString().trim())){
+                } else if (TextUtils.isEmpty(etUsername.getText().toString().trim())) {
                     etUsername.setError("Usernam diperlukan!");
-                } else if(TextUtils.isEmpty(etPassword.getText().toString().trim())){
+                } else if (TextUtils.isEmpty(etPassword.getText().toString().trim())) {
                     etPassword.setError("Password diperlukan!");
                 } else {
                     daftarUser();
                     Intent i = new Intent(DaftarUser.this, HomeUser.class);
                     startActivity(i);
-                } break;
+                }
+                break;
             case R.id.showPass:
-                if(showPass.isChecked()){
+                if (showPass.isChecked()) {
                     etPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
                 } else {
                     etPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
-                } break;
+                }
+                break;
         }
     }
 
@@ -106,7 +126,21 @@ public class DaftarUser extends AppCompatActivity implements View.OnClickListene
         startActivity(intent);
     }
 
-    public static boolean isValidEmail(CharSequence email){
+    public static boolean isValidEmail(CharSequence email) {
         return (Patterns.EMAIL_ADDRESS.matcher(email).matches());
+    }
+
+    private void processSaveToken(String jwtToken, String roleid, String accountid) {
+        PreferenceHelper prefShared = new PreferenceHelper(this);
+        prefShared.setStr("jwtToken", "Bearer " + jwtToken);
+        prefShared.setStr("roleid", roleid);
+        prefShared.setStr("accountid", accountid);
+        if (roleid.equals("1")) {
+            Intent i = new Intent(DaftarUser.this, DaftarPenugasan.class);
+            startActivity(i);
+        } else {
+            Intent i = new Intent(DaftarUser.this, HomeUser.class);
+            startActivity(i);
+        }
     }
 }

@@ -12,7 +12,7 @@ import com.example.parkir.R;
 
 public class SettingKangparkir extends Fragment {
     View view;
-    Button editProfil, editPenugasan, btnHistory;
+    Button editProfil, editPenugasan, btnHistory, btnBarChart;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -38,6 +38,14 @@ public class SettingKangparkir extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getContext(), History.class);
+                startActivity(i);
+            }
+        });
+        btnBarChart = (Button) view.findViewById(R.id.barChart);
+        btnBarChart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), BarChartKangParkir.class);
                 startActivity(i);
             }
         });
