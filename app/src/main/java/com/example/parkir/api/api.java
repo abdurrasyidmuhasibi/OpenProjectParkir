@@ -3,6 +3,7 @@ package com.example.parkir.api;
 import com.example.parkir.model.PaymentParking.PaymentParkingModel;
 import com.example.parkir.model.account.AccountModel;
 import com.example.parkir.model.account.Assignment;
+import com.example.parkir.model.chartmonthly.ChartMonthlyModel;
 import com.example.parkir.model.daftar.RegisterModel;
 import com.example.parkir.model.history.HistoryModel;
 import com.example.parkir.model.login.LoginModel;
@@ -96,4 +97,7 @@ public interface api {
             @Header("Authorization") String token,
             @Field("nominal") Integer nominal
     );
+
+    @GET("payments/month/account/")
+    Call<ChartMonthlyModel> payments_chart_account(@Header("Authorization") String token);
 }
