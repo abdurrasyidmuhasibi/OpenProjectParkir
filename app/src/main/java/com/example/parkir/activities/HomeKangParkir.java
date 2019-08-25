@@ -66,11 +66,13 @@ public class HomeKangParkir extends AppCompatActivity {
     public void topup(View view) {
         Intent i = new Intent(HomeKangParkir.this, Topup.class);
         startActivity(i);
+        finish();
     }
 
     public void withdraw(View view) {
         Intent i = new Intent(HomeKangParkir.this, Withdraw.class);
         startActivity(i);
+        finish();
     }
 
     @Override

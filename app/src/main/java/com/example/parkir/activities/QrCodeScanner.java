@@ -1,8 +1,8 @@
 package com.example.parkir.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import com.example.parkir.R;
@@ -59,7 +59,7 @@ public class QrCodeScanner extends AppCompatActivity {
 
                 /* KANG PARKIR ID */
 //                Integer accountid = parseInt(result.getContents());
-                Toast.makeText(QrCodeScanner.this, "" +accountid, Toast.LENGTH_SHORT).show();
+                Toast.makeText(QrCodeScanner.this, "" + accountid, Toast.LENGTH_SHORT).show();
 
 
                 /*Create handle for the RetrofitInstance interface*/
@@ -95,7 +95,8 @@ public class QrCodeScanner extends AppCompatActivity {
             }
 
             @Override
-            public void possibleResultPoints(List<ResultPoint> resultPoints) {}
+            public void possibleResultPoints(List<ResultPoint> resultPoints) {
+            }
         });
     }
 }
