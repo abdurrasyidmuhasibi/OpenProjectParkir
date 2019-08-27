@@ -1,4 +1,3 @@
-
 package com.example.parkir.model.account;
 
 import com.google.gson.annotations.Expose;

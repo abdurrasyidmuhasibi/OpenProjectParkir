@@ -21,7 +21,7 @@ public class SettingUser extends Fragment {
         editProfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getContext(),EditProfil.class);
+                Intent i = new Intent(getContext(), EditProfil.class);
                 startActivity(i);
             }
         });

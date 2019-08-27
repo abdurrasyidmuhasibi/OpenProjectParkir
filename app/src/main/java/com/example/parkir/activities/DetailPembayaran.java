@@ -56,28 +56,28 @@ public class DetailPembayaran extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String parkingType = "1";
                 String nominal = "2000";
-                if (adapter.getItem(i).equals("Pilih Type Parkir")){
+                if (adapter.getItem(i).equals("Pilih Type Parkir")) {
                     parkingType = "0";
                     nominal = "0";
-                }else if (adapter.getItem(i).equals("Motor")){
+                } else if (adapter.getItem(i).equals("Motor")) {
                     parkingType = "1";
                     nominal = "2000";
-                }else if (adapter.getItem(i).equals("Mobil")){
+                } else if (adapter.getItem(i).equals("Mobil")) {
                     parkingType = "2";
                     nominal = "3000";
-                }else if (adapter.getItem(i).equals("Truk/Minibus")){
+                } else if (adapter.getItem(i).equals("Truk/Minibus")) {
                     parkingType = "3";
                     nominal = "5000";
-                }else if (adapter.getItem(i).equals("Truk Gandeng/Bus Besar")){
+                } else if (adapter.getItem(i).equals("Truk Gandeng/Bus Besar")) {
                     parkingType = "4";
                     nominal = "10000";
-                }else{
+                } else {
                     parkingType = "1";
                     nominal = "2000";
                 }
 
                 txtParkingTypeId.setText(parkingType);
-                txtNominal.setText("Rp. "+ nominal);
+                txtNominal.setText("Rp. " + nominal);
             }
 
             @Override
@@ -124,11 +124,11 @@ public class DetailPembayaran extends AppCompatActivity {
         String parkingtypeid = txtParkingTypeId.getText().toString();
         String platNomor = etPlatNomor.getText().toString();
 
-        if (parkingtypeid.equals("0")){
+        if (parkingtypeid.equals("0")) {
             Toast.makeText(DetailPembayaran.this, "Type parkir belum terisi.", Toast.LENGTH_SHORT).show();
-        }else if (TextUtils.isEmpty(etPlatNomor.getText().toString())){
+        } else if (TextUtils.isEmpty(etPlatNomor.getText().toString())) {
             Toast.makeText(DetailPembayaran.this, "Plat nomor belum terisi.", Toast.LENGTH_SHORT).show();
-        }else{
+        } else {
             /*Create handle for the RetrofitInstance interface*/
             api service = RetrofitClient.getRetrofitInstance().create(api.class);
             Call<PaymentParkingModel> call = service.payments(jwtToken, receiverid, parkingtypeid, platNomor);
@@ -142,11 +142,11 @@ public class DetailPembayaran extends AppCompatActivity {
                     String nominal = txtNominal.getText().toString();
                     String platNomor = etPlatNomor.getText().toString();
                     api service = RetrofitClient.getRetrofitInstance().create(api.class);
-                    Call<NotificationModel> call2 = service.notifications(fcmToken ,nominal, platNomor);
+                    Call<NotificationModel> call2 = service.notifications(fcmToken, nominal, platNomor);
                     call2.enqueue(new Callback<NotificationModel>() {
                         @Override
                         public void onResponse(Call<NotificationModel> call, Response<NotificationModel> response) {
-                            Toast.makeText(DetailPembayaran.this, ""+ response.body().getData().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(DetailPembayaran.this, "" + response.body().getData().getMessage(), Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(DetailPembayaran.this, Success.class);
                             startActivity(intent);
                         }

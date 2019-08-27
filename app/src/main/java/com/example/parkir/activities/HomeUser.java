@@ -70,12 +70,12 @@ public class HomeUser extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void clickTopup(View view){
+    public void clickTopup(View view) {
         Intent i = new Intent(HomeUser.this, TopupDashboard.class);
         startActivity(i);
     }
 
-    public void clickWithdraw(View view){
+    public void clickWithdraw(View view) {
         Intent i = new Intent(HomeUser.this, Withdraw.class);
         startActivity(i);
     }

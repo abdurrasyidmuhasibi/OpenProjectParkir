@@ -15,8 +15,8 @@ public class Success extends AppCompatActivity {
         setContentView(R.layout.activity_success);
     }
 
-    public void myHome(View view){
-        Intent i = new Intent(Success.this,HomeUser.class);
+    public void myHome(View view) {
+        Intent i = new Intent(Success.this, HomeUser.class);
         startActivity(i);
     }
 }

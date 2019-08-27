@@ -47,11 +47,12 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
                 userLogin();
                 break;
             case R.id.showPass:
-                if(showPass.isChecked()){
+                if (showPass.isChecked()) {
                     etPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
                 } else {
                     etPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
-                } break;
+                }
+                break;
         }
     }
 

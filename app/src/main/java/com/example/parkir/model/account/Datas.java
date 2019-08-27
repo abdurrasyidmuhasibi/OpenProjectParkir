@@ -1,4 +1,3 @@
-
 package com.example.parkir.model.account;
 
 import com.google.gson.annotations.Expose;
@@ -12,9 +11,18 @@ public class Datas {
     @SerializedName("full_name")
     @Expose
     private String fullName;
+    @SerializedName("username")
+    @Expose
+    private String username;
+    @SerializedName("password")
+    @Expose
+    private String password;
     @SerializedName("email")
     @Expose
     private String email;
+    @SerializedName("address")
+    @Expose
+    private String address;
     @SerializedName("balance")
     @Expose
     private Integer balance;
@@ -44,12 +52,36 @@ public class Datas {
         this.fullName = fullName;
     }
 
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public Integer getBalance() {
@@ -83,4 +115,5 @@ public class Datas {
     public void setAssignment(Assignment assignment) {
         this.assignment = assignment;
     }
+
 }

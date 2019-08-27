@@ -3,6 +3,7 @@ package com.example.parkir.api;
 import com.example.parkir.model.PaymentParking.PaymentParkingModel;
 import com.example.parkir.model.account.AccountModel;
 import com.example.parkir.model.account.Assignment;
+import com.example.parkir.model.account.Datas;
 import com.example.parkir.model.chartmonthly.ChartMonthlyModel;
 import com.example.parkir.model.daftar.RegisterModel;
 import com.example.parkir.model.history.HistoryModel;
@@ -48,6 +49,17 @@ public interface api {
             @Field("location_address") String alamatLokasi,
             @Field("district") String kecamatan,
             @Field("city") String kota
+    );
+
+    @FormUrlEncoded
+    @PUT("accounts/")
+    Call<Datas> profil(
+        @Header("Authorization") String token,
+        @Field("full_name") String nama,
+        @Field("email") String email,
+        @Field("address") String alamat,
+        @Field("username") String username,
+        @Field("password") String password
     );
 
     @GET("accounts/")

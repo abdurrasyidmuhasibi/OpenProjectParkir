@@ -52,11 +52,11 @@ public class Withdraw extends AppCompatActivity {
         btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(TextUtils.isEmpty(etNominal.getText().toString().trim())){
+                if (TextUtils.isEmpty(etNominal.getText().toString().trim())) {
                     Toast.makeText(Withdraw.this, "Nominal wajib di isi!", Toast.LENGTH_LONG).show();
-                }else if(etNominal.getText().toString().equals("0")){
+                } else if (etNominal.getText().toString().equals("0")) {
                     Toast.makeText(Withdraw.this, "Nominal tidak boleh 0!", Toast.LENGTH_LONG).show();
-                }else{
+                } else {
                     Call<PaymentWithdrawModel> postCall = mApiInterface.payment_withdraw(jwtToken, Integer.parseInt(etNominal.getText().toString()));
                     postCall.enqueue(new Callback<PaymentWithdrawModel>() {
                         @Override

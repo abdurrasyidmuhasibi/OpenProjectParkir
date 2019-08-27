@@ -40,7 +40,7 @@ public class TopupConfirm extends AppCompatActivity {
         final String payment_gateway = intent.getStringExtra("payment_gateway");
 
         txtPaymentGateway.setText(payment_gateway);
-        btnConfirm.setText("Confirm with "+payment_gateway);
+        btnConfirm.setText("Confirm with " + payment_gateway);
 
         /* GET JWT TOKEN */
         PreferenceHelper prefShared2 = new PreferenceHelper(this);
@@ -51,11 +51,11 @@ public class TopupConfirm extends AppCompatActivity {
         btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(TextUtils.isEmpty(etNominal.getText().toString().trim())){
+                if (TextUtils.isEmpty(etNominal.getText().toString().trim())) {
                     Toast.makeText(TopupConfirm.this, "Nominal wajib di isi!", Toast.LENGTH_LONG).show();
-                }else if(etNominal.getText().toString().equals("0")){
+                } else if (etNominal.getText().toString().equals("0")) {
                     Toast.makeText(TopupConfirm.this, "Nominal tidak boleh 0!", Toast.LENGTH_LONG).show();
-                }else{
+                } else {
                     Call<PaymentTopupModel> postCall = mApiInterface.payment_topup(jwtToken, payment_gateway, Integer.parseInt(etNominal.getText().toString()));
                     postCall.enqueue(new Callback<PaymentTopupModel>() {
                         @Override

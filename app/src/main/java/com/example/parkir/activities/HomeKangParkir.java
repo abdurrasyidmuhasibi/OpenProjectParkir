@@ -48,10 +48,7 @@ public class HomeKangParkir extends AppCompatActivity {
             public void onFailure(Call<AccountModel> call, Throwable t) {
                 Toast.makeText(HomeKangParkir.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
             }
-
-
         });
-        /* END LOAD CONTENT HOME */
     }
 
     public void myQrCode(View view) {
