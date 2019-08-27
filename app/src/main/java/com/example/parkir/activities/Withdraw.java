@@ -7,6 +7,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.parkir.R;
@@ -21,6 +22,7 @@ import retrofit2.Response;
 
 public class Withdraw extends AppCompatActivity {
 
+    TextView txtPaymentGateway;
     Button btnConfirm;
     EditText etNominal;
     api mApiInterface;
@@ -30,9 +32,15 @@ public class Withdraw extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_withdraw);
 
+        txtPaymentGateway = findViewById(R.id.txtPaymentGateway);
         btnConfirm = findViewById(R.id.btnConfirm);
         etNominal = findViewById(R.id.etNominal);
 
+
+        Intent intent = getIntent();
+        final String payment_gateway = intent.getStringExtra("payment_gateway");
+
+        txtPaymentGateway.setText(payment_gateway);
         btnConfirm.setText("Cairkan");
 
         /* GET JWT TOKEN */

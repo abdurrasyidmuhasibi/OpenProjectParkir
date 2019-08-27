@@ -13,8 +13,9 @@
     <list default="true" id="bbc5211a-4c11-4a3c-ba66-ded75a40fa7b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/DaftarUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/DaftarUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/HomeKangParkir.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/HomeKangParkir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/Withdraw.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/Withdraw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_topup_confirm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_topup_confirm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_withdraw.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_withdraw.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +26,6 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="JWNRK19104000559" />
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
@@ -44,7 +44,46 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_topup_confirm.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="67" column="49" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_withdraw.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="67" column="49" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/TopupConfirm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="41" column="51" lean-forward="true" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/Withdraw.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="42" column="49" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -65,6 +104,7 @@
       <find>jwtToken</find>
       <find>TopupConfirm</find>
       <find>btn</find>
+      <find>txtPaymentGateway</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -111,20 +151,20 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_topup_dashboard.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/row_gateway.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/adapters/GatewayAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_withdraw.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_topup_confirm.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_topup.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_home_user.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_setting_logout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/SettingAkun.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/TopupConfirm.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/Withdraw.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/Topup.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/TopupDashboard.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/HomeKangParkir.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/HomeUser.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/DaftarKangParkir.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/DaftarUser.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/Withdraw.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/TopupConfirm.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_withdraw.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_topup_confirm.xml" />
       </list>
     </option>
   </component>
@@ -165,12 +205,23 @@
               <item name="parkir" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="activities" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Android KMIPN Parkir" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="Android KMIPN Parkir" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -447,7 +498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566879830838</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Fix">
+      <created>1566894247554</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1566894247554</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView">
@@ -461,6 +519,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Resources Explorer" order="0" sideWeight="0.5024155" side_tool="true" weight="0.23071104" />
       <window_info id="Captures" order="1" side_tool="true" weight="0.25" />
@@ -476,8 +535,8 @@
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32850242" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.32850242" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50075644" side_tool="true" weight="0.32850242" />
-      <window_info anchor="bottom" id="Build" order="5" weight="0.23188406" />
-      <window_info anchor="bottom" id="Android Profiler" order="6" />
+      <window_info anchor="bottom" id="Build" order="5" visible="true" weight="0.23188406" />
+      <window_info anchor="bottom" id="Android Profiler" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49924356" weight="0.9516908" />
       <window_info anchor="bottom" id="Debug" order="8" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.32850242" />
@@ -538,20 +597,11 @@
     <MESSAGE value="." />
     <MESSAGE value="Update ui scanner, autologin user" />
     <MESSAGE value="UI Clear" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI Clear" />
+    <MESSAGE value="Fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/EditPenugasan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="43" column="60" lean-forward="true" selection-start-line="43" selection-start-column="60" selection-end-line="43" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/model/paymenttype/Data.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -686,22 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_topup_confirm.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_withdraw.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_bar_chart_kang_parkir.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -746,14 +780,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="514">
           <caret line="42" column="36" lean-forward="true" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_topup.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="108" selection-start-line="44" selection-start-column="108" selection-end-line="44" selection-end-column="108" />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2" />
@@ -819,20 +845,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/Withdraw.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="82" column="34" lean-forward="true" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/TopupConfirm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="80" column="4" lean-forward="true" selection-start-line="80" selection-start-column="4" selection-end-line="94" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/Topup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="454">
@@ -881,6 +893,47 @@
           <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk">
+      <provider selected="true" editor-type-id="apk-viewer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_topup.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" column="108" selection-start-line="44" selection-start-column="108" selection-end-line="44" selection-end-column="108" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/Withdraw.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="42" column="49" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/parkir/activities/TopupConfirm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="41" column="51" lean-forward="true" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_withdraw.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="67" column="49" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_topup_confirm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="67" column="49" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
   </component>
 </project>
