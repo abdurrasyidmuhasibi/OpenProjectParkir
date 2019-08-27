@@ -25,6 +25,7 @@ public class HomeKangParkir extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_kang_parkir);
+
         txtBalance = (TextView) findViewById(R.id.txtBalance);
         txtName = (TextView) findViewById(R.id.txtName);
 

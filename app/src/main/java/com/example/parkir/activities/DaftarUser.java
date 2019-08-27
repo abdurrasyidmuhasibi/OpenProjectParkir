@@ -74,7 +74,7 @@ public class DaftarUser extends AppCompatActivity implements View.OnClickListene
 
                     @Override
                     public void onFailure(Call<LoginModel> call, Throwable t) {
-                        Toast.makeText(DaftarUser.this, "Gagal Login", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DaftarUser.this, "Gabisa Login", Toast.LENGTH_SHORT).show();
                     }
                 });
             }
