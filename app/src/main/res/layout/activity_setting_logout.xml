@@ -63,6 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:onClick="myQrCode"
             android:src="@drawable/qr_scanner_button" />
 
         <ImageView

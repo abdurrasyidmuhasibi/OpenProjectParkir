@@ -1,8 +1,8 @@
 package com.example.parkir.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +14,6 @@ import com.example.parkir.R;
 import com.example.parkir.RetrofitClient;
 import com.example.parkir.api.api;
 import com.example.parkir.helpers.PreferenceHelper;
-import com.example.parkir.model.login.LoginModel;
 import com.example.parkir.model.paymenttopup.PaymentTopupModel;
 
 import retrofit2.Call;
@@ -76,5 +75,21 @@ public class TopupConfirm extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        PreferenceHelper prefShared = new PreferenceHelper(this);
+        String roleid = prefShared.getStr("roleid");
+        if (roleid.equals("1")) {
+            Intent intent = new Intent(TopupConfirm.this, HomeKangParkir.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+        } else if (roleid.equals("2")) {
+            Intent intent = new Intent(TopupConfirm.this, HomeUser.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+        }
     }
 }

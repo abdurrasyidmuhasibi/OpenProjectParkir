@@ -92,6 +92,7 @@
             android:layout_marginLeft="32dp"
             android:background="@drawable/bg_header"
             android:text="Top Up"
+            android:onClick="clickTopup"
             android:textAllCaps="false"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -106,6 +107,7 @@
             android:layout_marginRight="32dp"
             android:background="@drawable/bg_header"
             android:text="Cairkan"
+            android:onClick="clickWithdraw"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />

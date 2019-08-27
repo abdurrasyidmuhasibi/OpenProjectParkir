@@ -14,13 +14,10 @@ import com.example.parkir.api.api;
 import com.example.parkir.helpers.PreferenceHelper;
 import com.example.parkir.model.account.AccountModel;
 import com.google.zxing.integration.android.IntentIntegrator;
-import com.google.zxing.integration.android.IntentResult;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
-import static java.lang.Integer.parseInt;
 
 public class HomeUser extends AppCompatActivity {
 
@@ -70,6 +67,16 @@ public class HomeUser extends AppCompatActivity {
 
     public void myAkun(View view) {
         Intent i = new Intent(HomeUser.this, SettingAkun.class);
+        startActivity(i);
+    }
+
+    public void clickTopup(View view){
+        Intent i = new Intent(HomeUser.this, TopupDashboard.class);
+        startActivity(i);
+    }
+
+    public void clickWithdraw(View view){
+        Intent i = new Intent(HomeUser.this, Withdraw.class);
         startActivity(i);
     }
 

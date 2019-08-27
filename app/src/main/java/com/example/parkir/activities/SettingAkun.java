@@ -39,6 +39,18 @@ public class SettingAkun extends AppCompatActivity {
         }
     }
 
+    public void myQrCode(View view) {
+        PreferenceHelper prefShared = new PreferenceHelper(this);
+        String roleid = prefShared.getStr("roleid");
+        if (roleid.equals("1")) {
+            Intent i = new Intent(SettingAkun.this, QrCode.class);
+            startActivity(i);
+        } else if (roleid.equals("2")) {
+            Intent i = new Intent(SettingAkun.this, QrCodeScanner.class);
+            startActivity(i);
+        }
+    }
+
     public void clickLogout(View view) {
         PreferenceHelper prefShared = new PreferenceHelper(this);
         prefShared.setStr("jwtToken", null);
