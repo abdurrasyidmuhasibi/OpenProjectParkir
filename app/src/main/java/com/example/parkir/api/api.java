@@ -79,8 +79,17 @@ public interface api {
     @GET("payments/expend/")
     Call<HistoryModel> payments_expend(@Header("Authorization") String token);
 
-    @GET("payments/gateway/")
-    Call<PaymentGatewayModel> payments_gateway();
+    @GET("payments/gateway/1")
+    Call<PaymentGatewayModel> payments_gateway_1();
+
+    @GET("payments/gateway/2")
+    Call<PaymentGatewayModel> payments_gateway_2();
+
+    @GET("payments/gateway/3")
+    Call<PaymentGatewayModel> payments_gateway_3();
+
+    @GET("payments/gateway/4")
+    Call<PaymentGatewayModel> payments_gateway_4();
 
     @FormUrlEncoded
     @POST("payments/topup/")

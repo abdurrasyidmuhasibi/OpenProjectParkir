@@ -64,7 +64,7 @@ public class HomeKangParkir extends AppCompatActivity {
     }
 
     public void topup(View view) {
-        Intent i = new Intent(HomeKangParkir.this, Topup.class);
+        Intent i = new Intent(HomeKangParkir.this, TopupDashboard.class);
         startActivity(i);
         finish();
     }

@@ -3,33 +3,21 @@ package com.example.parkir.adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.parkir.R;
-import com.example.parkir.activities.DetailPembayaran;
-import com.example.parkir.activities.HomeUser;
-import com.example.parkir.activities.Topup;
 import com.example.parkir.activities.TopupConfirm;
 import com.example.parkir.api.api;
-import com.example.parkir.helpers.PreferenceHelper;
-import com.example.parkir.model.paymenttopup.PaymentTopupModel;
 import com.example.parkir.model.paymenttype.Data_;
 import com.jakewharton.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class GatewayAdapter extends RecyclerView.Adapter<GatewayAdapter.CustomViewHolder> {
 
