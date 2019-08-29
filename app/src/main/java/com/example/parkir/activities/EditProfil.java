@@ -55,8 +55,8 @@ public class EditProfil extends AppCompatActivity implements View.OnClickListene
                 etNama.setText("" + response.body().getData().getDatas().getFullName());
                 etEmail.setText("" + response.body().getData().getDatas().getEmail());
                 etAlamat.setText("" + response.body().getData().getDatas().getAddress());
-//                etUsername.setText("" + response.body().getData().getDatas().getUsername());
-//                etPassword.setText("" + response.body().getData().getDatas().getPassword());
+                etUsername.setText("" + response.body().getData().getDatas().getUsername());
+                etPassword.setText("" + response.body().getData().getDatas().getPassword());
             }
 
             @Override

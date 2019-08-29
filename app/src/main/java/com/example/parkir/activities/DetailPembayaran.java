@@ -18,6 +18,7 @@ import com.example.parkir.api.api;
 import com.example.parkir.helpers.PreferenceHelper;
 import com.example.parkir.model.PaymentParking.PaymentParkingModel;
 import com.example.parkir.model.notification.NotificationModel;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -137,7 +138,7 @@ public class DetailPembayaran extends AppCompatActivity {
                 public void onResponse(Call<PaymentParkingModel> call, Response<PaymentParkingModel> response) {
                     Toast.makeText(DetailPembayaran.this, "" + response.body().getData().getMessage(), Toast.LENGTH_SHORT).show();
 
-                    /* SEND NOTIF */
+                    /* SEND NOTIF KANG PARKIR*/
                     String fcmToken = txtFcmToken.getText().toString();
                     String nominal = txtNominal.getText().toString();
                     String platNomor = etPlatNomor.getText().toString();
@@ -146,7 +147,23 @@ public class DetailPembayaran extends AppCompatActivity {
                     call2.enqueue(new Callback<NotificationModel>() {
                         @Override
                         public void onResponse(Call<NotificationModel> call, Response<NotificationModel> response) {
-                            Toast.makeText(DetailPembayaran.this, "" + response.body().getData().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(DetailPembayaran.this, "Success send to kang parkir", Toast.LENGTH_SHORT).show();
+
+                        }
+
+                        @Override
+                        public void onFailure(Call<NotificationModel> call, Throwable t) {
+                            Toast.makeText(DetailPembayaran.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+                    /* SEND NOTIF USER*/
+                    String fcmTokenUser = FirebaseInstanceId.getInstance().getToken();
+
+                    Call<NotificationModel> call3 = service.notifications(fcmTokenUser, nominal, platNomor);
+                    call3.enqueue(new Callback<NotificationModel>() {
+                        @Override
+                        public void onResponse(Call<NotificationModel> call, Response<NotificationModel> response) {
                             Intent intent = new Intent(DetailPembayaran.this, Success.class);
                             startActivity(intent);
                         }
