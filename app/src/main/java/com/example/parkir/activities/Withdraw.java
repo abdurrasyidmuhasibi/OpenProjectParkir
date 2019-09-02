@@ -34,8 +34,7 @@ public class Withdraw extends AppCompatActivity {
 
         txtPaymentGateway = findViewById(R.id.txtPaymentGateway);
         btnConfirm = findViewById(R.id.btnConfirm);
-        etNominal = findViewById(R.id.etNominal);
-
+        etNominal = findViewById(R.id.textNominal);
 
         Intent intent = getIntent();
         final String payment_gateway = intent.getStringExtra("payment_gateway");
@@ -92,5 +91,17 @@ public class Withdraw extends AppCompatActivity {
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
         }
+    }
+
+    public void duaPuluh(View view){
+        etNominal.setText("20000");
+    }
+
+    public void limaPuluh(View view){
+        etNominal.setText("50000");
+    }
+
+    public void seratus(View view){
+        etNominal.setText("100000");
     }
 }
