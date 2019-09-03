@@ -61,9 +61,9 @@ public class Withdraw extends AppCompatActivity {
                         @Override
                         public void onResponse(Call<PaymentWithdrawModel> call, Response<PaymentWithdrawModel> response) {
                             if (response.isSuccessful()) {
-                                Toast.makeText(Withdraw.this, "Success withdraw " + response.body().getData().getDatas().toString(), Toast.LENGTH_LONG).show();
+                                Toast.makeText(Withdraw.this, "Success Withdraw " + response.body().getData().getDatas().toString(), Toast.LENGTH_LONG).show();
                             } else {
-                                Toast.makeText(Withdraw.this, "Gagal withdraw", Toast.LENGTH_LONG).show();
+                                Toast.makeText(Withdraw.this, "Gagal Withdraw", Toast.LENGTH_LONG).show();
                             }
                         }
 

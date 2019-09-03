@@ -118,7 +118,7 @@ public class EditProfil extends AppCompatActivity implements View.OnClickListene
 
             @Override
             public void onFailure(Call<Datas> call, Throwable t) {
-                Toast.makeText(EditProfil.this, "Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(EditProfil.this, "Error, harap periksa koneksi Internet Anda!", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -61,9 +61,9 @@ public class TopupConfirm extends AppCompatActivity {
                         @Override
                         public void onResponse(Call<PaymentTopupModel> call, Response<PaymentTopupModel> response) {
                             if (response.isSuccessful()) {
-                                Toast.makeText(TopupConfirm.this, "Success topup " + response.body().getData().getDatas().toString(), Toast.LENGTH_LONG).show();
+                                Toast.makeText(TopupConfirm.this, "Success Top-Up " + response.body().getData().getDatas().toString(), Toast.LENGTH_LONG).show();
                             } else {
-                                Toast.makeText(TopupConfirm.this, "Gagal topup", Toast.LENGTH_LONG).show();
+                                Toast.makeText(TopupConfirm.this, "Gagal Top-Up", Toast.LENGTH_LONG).show();
                             }
                         }
 

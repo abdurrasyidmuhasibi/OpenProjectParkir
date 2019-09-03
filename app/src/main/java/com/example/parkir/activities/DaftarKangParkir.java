@@ -60,7 +60,7 @@ public class DaftarKangParkir extends AppCompatActivity implements View.OnClickL
         call.enqueue(new Callback<RegisterModel>() {
             @Override
             public void onResponse(Call<RegisterModel> call, Response<RegisterModel> response) {
-                Toast.makeText(DaftarKangParkir.this, "Success Daftar KangParkir", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DaftarKangParkir.this, "Success Daftar sebagai Petugas Parkir", Toast.LENGTH_SHORT).show();
                 Call<LoginModel> login = RetrofitClient
                         .getRetrofitInstance()
                         .create(api.class)
@@ -74,7 +74,7 @@ public class DaftarKangParkir extends AppCompatActivity implements View.OnClickL
 
                     @Override
                     public void onFailure(Call<LoginModel> call, Throwable t) {
-                        Toast.makeText(DaftarKangParkir.this, "Gabisa Lanjut ke Penugasan", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DaftarKangParkir.this, "Tidak dapat lanjut ke Daftar Penugasan", Toast.LENGTH_SHORT).show();
                     }
                 });
             }

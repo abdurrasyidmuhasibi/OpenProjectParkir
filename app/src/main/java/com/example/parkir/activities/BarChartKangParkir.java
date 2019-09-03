@@ -48,15 +48,13 @@ public class BarChartKangParkir extends AppCompatActivity {
         call.enqueue(new Callback<ChartMonthlyModel>() {
             @Override
             public void onResponse(Call<ChartMonthlyModel> call, Response<ChartMonthlyModel> response) {
-                Toast.makeText(BarChartKangParkir.this, "Success...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(BarChartKangParkir.this, "BarChart Pendapatan", Toast.LENGTH_SHORT).show();
                 generateDataList(response.body().getData().getDatas());
-
-
             }
 
             @Override
             public void onFailure(Call<ChartMonthlyModel> call, Throwable t) {
-                Toast.makeText(BarChartKangParkir.this, "error" + t, Toast.LENGTH_SHORT).show();
+                Toast.makeText(BarChartKangParkir.this, "BarChart Error" + t, Toast.LENGTH_SHORT).show();
             }
         });
     }

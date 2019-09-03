@@ -60,7 +60,7 @@ public class DaftarUser extends AppCompatActivity implements View.OnClickListene
         call.enqueue(new Callback<RegisterModel>() {
             @Override
             public void onResponse(Call<RegisterModel> call, Response<RegisterModel> response) {
-                Toast.makeText(DaftarUser.this, "Success Daftar User", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DaftarUser.this, "Success Daftar sebagai User", Toast.LENGTH_SHORT).show();
                 Call<LoginModel> login = RetrofitClient
                         .getRetrofitInstance()
                         .create(api.class)
@@ -74,7 +74,7 @@ public class DaftarUser extends AppCompatActivity implements View.OnClickListene
 
                     @Override
                     public void onFailure(Call<LoginModel> call, Throwable t) {
-                        Toast.makeText(DaftarUser.this, "Gabisa Login", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(DaftarUser.this, "Tidak dapat login, harap periksa koneksi Internet Anda!", Toast.LENGTH_SHORT).show();
                     }
                 });
             }

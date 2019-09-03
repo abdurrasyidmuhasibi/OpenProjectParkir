@@ -49,13 +49,13 @@ public class History extends AppCompatActivity {
             call.enqueue(new Callback<HistoryModel>() {
                 @Override
                 public void onResponse(Call<HistoryModel> call, Response<HistoryModel> response) {
-                    Toast.makeText(History.this, "Success...", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(History.this, "History Transaksi Parkir", Toast.LENGTH_SHORT).show();
                     generateDataList(response.body().getData().getDatas());
                 }
 
                 @Override
                 public void onFailure(Call<HistoryModel> call, Throwable t) {
-                    Toast.makeText(History.this, "error" + t, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(History.this, "Error, harap periksa koneksi Internet Anda!" + t, Toast.LENGTH_SHORT).show();
                 }
             });
         } else {
@@ -70,13 +70,13 @@ public class History extends AppCompatActivity {
             call.enqueue(new Callback<HistoryModel>() {
                 @Override
                 public void onResponse(Call<HistoryModel> call, Response<HistoryModel> response) {
-                    Toast.makeText(History.this, "Success...", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(History.this, "History Transaksi Parkir", Toast.LENGTH_SHORT).show();
                     generateDataList(response.body().getData().getDatas());
                 }
 
                 @Override
                 public void onFailure(Call<HistoryModel> call, Throwable t) {
-                    Toast.makeText(History.this, "error" + t, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(History.this, "Error, harap periksa koneksi Internet Anda!" + t, Toast.LENGTH_SHORT).show();
                 }
             });
         }

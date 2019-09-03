@@ -83,7 +83,7 @@ public class DaftarPenugasan extends AppCompatActivity implements View.OnClickLi
 
             @Override
             public void onFailure(Call<Assignment> call, Throwable t) {
-                Toast.makeText(DaftarPenugasan.this, "Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DaftarPenugasan.this, "Error, harap periksa koneksi Internet Anda!", Toast.LENGTH_SHORT).show();
             }
         });
     }

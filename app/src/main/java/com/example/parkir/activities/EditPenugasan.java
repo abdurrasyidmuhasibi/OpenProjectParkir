@@ -100,7 +100,7 @@ public class EditPenugasan extends AppCompatActivity implements View.OnClickList
 
             @Override
             public void onFailure(Call<Assignment> call, Throwable t) {
-                Toast.makeText(EditPenugasan.this, "Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(EditPenugasan.this, "Error, harap periksa koneksi Internet Anda!", Toast.LENGTH_SHORT).show();
             }
         });
     }

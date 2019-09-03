@@ -58,13 +58,13 @@ public class Topup extends AppCompatActivity {
         call.enqueue(new Callback<PaymentGatewayModel>() {
             @Override
             public void onResponse(Call<PaymentGatewayModel> call, Response<PaymentGatewayModel> response) {
-                Toast.makeText(Topup.this, "Success...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Topup.this, "Top-Up", Toast.LENGTH_SHORT).show();
                 generateDataList(response.body().getData().getDatas());
             }
 
             @Override
             public void onFailure(Call<PaymentGatewayModel> call, Throwable t) {
-                Toast.makeText(Topup.this, "error" + t, Toast.LENGTH_SHORT).show();
+                Toast.makeText(Topup.this, "Error, harap periksa koneksi Internet Anda!" + t, Toast.LENGTH_SHORT).show();
             }
         });
     }
