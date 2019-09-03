@@ -9,20 +9,48 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.TopupDashboard"></activity>
-        <activity android:name=".activities.QrCodeScanner" />
-        <activity android:name=".activities.BarChartKangParkir" />
-        <activity android:name=".activities.TopupConfirm" />
-        <activity android:name=".activities.Withdraw" />
-        <activity android:name=".activities.Topup" />
-        <activity android:name=".activities.History" />
-        <activity android:name=".activities.EditProfil" />
-        <activity android:name=".activities.EditPenugasan" />
-        <activity android:name=".activities.Firebase" />
-        <activity android:name=".activities.Success" />
-        <activity android:name=".activities.DaftarPenugasan" />
-        <activity android:name=".activities.DaftarKangParkir" />
-        <activity android:name=".activities.DaftarUser" />
+        <activity
+            android:name=".activities.TopupDashboard"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.QrCodeScanner"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.BarChartKangParkir"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.TopupConfirm"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.Withdraw"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.Topup"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.History"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.EditProfil"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.EditPenugasan"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.Firebase"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.Success"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.DaftarPenugasan"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.DaftarKangParkir"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activities.DaftarUser"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".activities.SettingAkun"
             android:screenOrientation="portrait" />

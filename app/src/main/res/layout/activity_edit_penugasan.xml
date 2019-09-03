@@ -148,6 +148,7 @@
         android:background="@drawable/bg_header_log"
         android:text="Edit"
         android:textAllCaps="false"
+        android:textColor="#FFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
