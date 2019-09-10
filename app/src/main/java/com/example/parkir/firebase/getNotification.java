@@ -45,7 +45,7 @@ public class getNotification extends FirebaseMessagingService {
                 .setDefaults(Notification.DEFAULT_ALL)
                 .setWhen(System.currentTimeMillis())
                 .setContentTitle(title)
-                .setSmallIcon(R.drawable.ic_attach_money_black_24dp)
+                .setSmallIcon(R.drawable.logo)
                 .setStyle(new NotificationCompat.BigTextStyle().bigText(content))
                 .setContentText(content);
         notificationManager.notify(1,notiBuilder.build());
